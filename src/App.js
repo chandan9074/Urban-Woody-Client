@@ -9,6 +9,7 @@ import {
 //import files
 import Homepage from './Pages/Homepage/Homepage';
 import Login from './Pages/Accounts/Login';
+import Registration from './Pages/Accounts/Registration';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route exact path="/login">
             <Login />
+          </Route>
+          <Route exact path="/registration">
+            <Registration />
           </Route>
         </Switch>
       </Router>

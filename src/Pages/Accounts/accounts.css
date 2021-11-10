@@ -1,7 +1,22 @@
 .login-part {
-  height: 80vh;
+  /* height: 80vh; */
 }
 
+.login-icon {
+  padding: 2rem 2.2rem;
+  margin-top: -7rem;
+}
+
+.reg-icon {
+  padding: 2.3rem 2rem;
+  margin-top: -7rem;
+}
+
+.google-part {
+  border-radius: 0 0 3rem 3rem;
+}
+
+/* login btn  */
 .fancy {
   background-color: transparent;
   border: 2px solid #000;
@@ -43,7 +58,7 @@
 .fancy a {
   font-size: 1.125em;
   line-height: 1.33333em;
-  padding-left: 3.2em;
+  padding-left: 2.8em;
   display: block;
   text-align: left;
   transition: all 0.3s ease-in-out;
@@ -106,4 +121,40 @@
 .fancy:hover .bottom-key-2 {
   right: 0;
   width: 0;
+}
+
+/* gmail btn  */
+
+.gmail-btn {
+  cursor: pointer;
+  font-weight: 700;
+  font-family: Helvetica, "sans-serif";
+  transition: all 0.2s;
+  padding: 7px 17px;
+  border-radius: 100px;
+  /* background: #cfef00; */
+  background-color: rgb(250, 131, 110);
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.gmail-btn:hover {
+  /* background: #a6c900; */
+  background-color: rgb(252, 100, 73);
+}
+
+.gmail-btn > svg {
+  width: 28px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gmail-btn:hover svg {
+  transform: translateX(5px);
+}
+
+.gmail-btn:active {
+  transform: scale(0.95);
 }
