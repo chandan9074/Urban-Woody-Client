@@ -5,13 +5,15 @@ import './myOrders.css';
 
 const SingleMyOrder = () => {
     return ( 
-        <div className="flex shadow p-4">
+        <div className="flex shadow-md p-4 rounded-lg">
             <div>
-                <img src="https://i.ibb.co/YWkrnmV/pexels-photo-6114955.jpg" alt="" className="w-52 h-48" />
+                <img src="https://i.ibb.co/YWkrnmV/pexels-photo-6114955.jpg" alt="" className="w-52 h-48 rounded-lg" />
+                
             </div>
             <div className="w-72 ml-4">
-                <h1 className="text-2xl font-semibold">Title Name</h1>
-                <p className="text-justify mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora placeat</p>
+                <h1 className="text-2xl font-semibold mb-0">Title Name</h1>
+                <div className="order-title-underline mb-3"></div>
+                <p className="text-justify mb-3 text-sm font-semibold">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora placeat</p>
                 <div className="flex justify-between items-center mt-1">
                     <Rating
                         placeholderRating={3.5}

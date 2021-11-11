@@ -98,11 +98,11 @@ function Dashboard(props) {
             </ListItemIcon> */}
             <ListItemText primary="Add Products" />
           </ListItem>
-          <ListItem button key="Make Admin">
-            {/* <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon> */}
-            <ListItemText primary="Make Admin" />
+          <ListItem button>
+            <div className="mr-auto">
+              <i class="fas fa-user-shield text-base"></i>
+              <Link to={`${url}/make-admin`} className="ml-2 no-underline text-black font-semibold text-base">Make Admin</Link>
+            </div>
           </ListItem>
       </List>
     </div>
