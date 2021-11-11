@@ -125,6 +125,14 @@
 
 /* gmail btn  */
 
+.gmail-btn:hover,
+.gmail-btn:visited,
+.gmail-btn:link,
+.gmail-btn:active {
+  text-decoration: none;
+  color: black;
+}
+
 .gmail-btn {
   cursor: pointer;
   font-weight: 700;

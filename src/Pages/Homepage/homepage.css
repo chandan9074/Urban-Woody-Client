@@ -6,6 +6,14 @@
   width: 100%;
 }
 
+.link-style:hover,
+.link-style:visited,
+.link-style:link,
+.link-style:active {
+  text-decoration: none;
+  color: black;
+}
+
 /* explore button  */
 
 .cta {

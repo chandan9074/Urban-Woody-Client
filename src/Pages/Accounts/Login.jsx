@@ -3,30 +3,43 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../Shared/Footer/Footer';
 import Navigation from '../Shared/Navigation/Navigation';
+import useAuth from '../../hooks/useAuth';
 
 // import files
 import './accounts.css'
+import Button from '@restart/ui/esm/Button';
 
 const Login = () => {
+
+    const {setEmail, setPassword, signInWithEmail, googleSignIn, error, setError} = useAuth()    
+
+    const handleEmail = (e) =>{
+        setEmail(e.target.value);
+    }
+    const handlePassword = (e) =>{
+        setPassword(e.target.value);
+    }
     return ( 
         <div>
             <Navigation />
             <div className="w-full flex flex-col justify-center items-center py-24 login-part">
                 <div className="flex flex-col shadow-md rounded-xl border-2 border-gray-200 py-5 px-5">
                     <i class="fas fa-user mx-auto bg-gray-800 text-gray-200 text-7xl rounded-full shadow login-icon"></i>
-                    <p className="py-2 mt-10 px-3 shadow-md border-2 border-gray-200 rounded-lg"><i class="fas fa-at mr-2"></i> <input type="email"  placeholder="Enter your email" className="w-72 outline-none border-l-2 border-gray-500 pl-2 text-gray-700 font-base font-semibold " /></p>
-                    <p className=" mb-2 py-2 px-3 shadow-md border-2 border-gray-200 rounded-lg"><i class="fas fa-unlock-alt mr-2"></i> <input type="password"  placeholder="Enter your password" className="w-72 outline-none border-l-2 border-gray-500 pl-2 text-gray-700 font-base font-semibold " /></p>
-                    <Link to="/login" className="ml-auto mr-2 mb-3 text-sm font-semibold">Forget Password?</Link>
-                    <button class="fancy mx-auto mt-2">
-                        <span class="top-key"></span>
-                        <a href="#" class="">Login</a>
-                        <span class="bottom-key-1"></span>
-                        <span class="bottom-key-2"></span>
-                    </button>
+                    <form onSubmit={(e)=>signInWithEmail(e)} className="flex flex-col">
+                        <p className="py-2 mt-10 px-3 shadow-md border-2 border-gray-200 rounded-lg"><i class="fas fa-at mr-2"></i> <input type="email" onBlur={handleEmail}  placeholder="Enter your email" className="w-72 outline-none border-l-2 border-gray-500 pl-2 text-gray-700 font-base font-semibold " /></p>
+                        <p className=" mb-2 py-2 px-3 shadow-md border-2 border-gray-200 rounded-lg"><i class="fas fa-unlock-alt mr-2"></i> <input type="password" onBlur={handlePassword}  placeholder="Enter your password" className="w-72 outline-none border-l-2 border-gray-500 pl-2 text-gray-700 font-base font-semibold " /></p>
+                        <Link to="/login" className="ml-auto mr-2 mb-3 text-sm font-semibold">Forget Password?</Link>
+                        <button type="submit" class="fancy mx-auto mt-2">
+                            <span class="top-key"></span>
+                            <a href="#" class="">Login</a>
+                            <span class="bottom-key-1"></span>
+                            <span class="bottom-key-2"></span>
+                        </button>
+                    </form>
                     <p className="mx-auto text-sm mt-2 mb-0 font-semibold">Create a new account? <Link to="/registration">Register</Link></p>
                 </div>
                 <div className="py-3 px-5 google-part shadow-md">
-                    <button className="gmail-btn">
+                    <button onClick={googleSignIn} className="gmail-btn">
                         <span>Continue with gmail</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 74 74" height="34" width="34">
                             <circle stroke-width="3" stroke="black" r="35.5" cy="37" cx="37"></circle>

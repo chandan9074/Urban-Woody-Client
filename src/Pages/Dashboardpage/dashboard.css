@@ -1,0 +1,51 @@
+.das-log-btn:hover,
+.das-log-btn:visited,
+.das-log-btn:link,
+.das-log-btn:active {
+  text-decoration: none;
+  color: white;
+}
+
+.das-log-btn {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #3d405b;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  padding: 6px;
+  width: 120px;
+  transition: all 0.5s;
+  cursor: pointer;
+  /* text-decoration: none; */
+  /* margin: 5px; */
+  margin-bottom: 10px;
+}
+
+.das-log-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.das-log-btn span::before {
+  content: "←";
+  position: absolute;
+  opacity: 0;
+  top: -2px;
+  left: -15px;
+  transition: 0.5s;
+  font-size: 1rem;
+  margin-bottom: 50px;
+}
+
+.das-log-btn:hover span {
+  padding-left: 25px;
+}
+
+.das-log-btn:hover span::before {
+  opacity: 1;
+  left: 0;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import Rating from 'react-rating';
+import { Link } from 'react-router-dom';
 
 
 const SingleService = () => {
@@ -18,7 +19,9 @@ const SingleService = () => {
                     />
                     <p className="text-2xl font-bold m-0 ">$ 100</p>
                 </div>
-                <button className="buy-btn w-8/12 mx-auto">Buy Now</button>
+                <Link to="" className="w-full flex justify-center link-style">
+                <button className="buy-btn w-8/12">Buy Now</button>
+                </Link>
             </div>
         </div>
      );

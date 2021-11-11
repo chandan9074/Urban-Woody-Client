@@ -1,0 +1,55 @@
+.nav-btn:hover,
+.nav-btn:visited,
+.nav-btn:link,
+.nav-btn:active {
+  text-decoration: none;
+  color: black;
+}
+.sing-btn:hover,
+.sing-btn:visited,
+.sing-btn:link,
+.sing-btn:active {
+  text-decoration: none;
+  /* color: black; */
+}
+
+.sing-btn {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #3d405b;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 15px;
+  padding: 8px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  /* text-decoration: none; */
+  /* margin: 5px; */
+}
+
+.sing-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.sing-btn span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.sing-btn:hover span {
+  padding-right: 15px;
+}
+
+.sing-btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
