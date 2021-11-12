@@ -129,7 +129,7 @@ function Dashboard(props) {
       <CssBaseline />
       <AppBar
         position="fixed"
-        className="bg-transparent"
+        className="bg-white"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },

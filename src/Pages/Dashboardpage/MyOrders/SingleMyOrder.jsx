@@ -13,9 +13,10 @@ const SingleMyOrder = () => {
             <div className="w-72 ml-4">
                 <h1 className="text-2xl font-semibold mb-0">Title Name</h1>
                 <div className="order-title-underline mb-3"></div>
-                <p className="text-justify mb-3 text-sm font-semibold">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora placeat</p>
+                <p className="line-elipsis text-justify mb-3 text-sm font-semibold">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora placeat</p>
                 <div className="flex justify-between items-center mt-1">
                     <Rating
+                        readonly
                         placeholderRating={3.5}
                         emptySymbol={<i className="far fa-star text-yellow-400"></i>}
                         placeholderSymbol={<i className="fas fa-star text-yellow-400"></i>}

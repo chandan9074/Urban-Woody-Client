@@ -1,35 +1,58 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Rating from 'react-rating';
 
 import './addProduct.css';
 
 const AddProduct = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const [rating, setRating] = useState("");
+    const [isloding, setIsloading] = useState(false)
+
+    const onSubmit = data =>{
+        data.rate = rating;
+        setIsloading(true)
+        axios.post('http://localhost:5000/product', data)
+        .then(res=>{
+            console.log("chandan", res)
+            reset();
+            setIsloading(false)
+            
+        })
+        .catch((error)=>{
+            setIsloading(false)
+            reset()
+        })
+    };
 
     const checkrate = (rate) => {
-        alert(rate)
+        setRating(rate)
     }
     return ( 
         <div>
             <h3 className="text-2xl font-semibold">Add Products</h3>
 
             <div>
+                {
+                    isloding ?<div className="w-2/5 mt-60"><div class="loader">Loading...</div></div>:
+                
+
                 <form onSubmit={handleSubmit(onSubmit)} className="shadow-md border-2 border-gray-100 rounded  py-4 px-4 mt-4 w-1/2">
                     <label className="text-lg" >Product Title:</label>
-                    <input {...register("email", { required: true })} className=" outline-none w-full py-2 px-2 rounded-md border-2 border-gray-200 bg-transparent shadow-md" type="email" placeholder="Enter product title" />
+                    <input {...register("title", { required: true })} className=" outline-none w-full py-2 px-2 rounded-md border-2 border-gray-200 bg-transparent shadow-md" type="text" placeholder="Enter product title" />
 
                     <label className="text-lg mt-3" >Product Image:</label>
-                    <input {...register("email", { required: true })} className=" outline-none w-full py-2 px-2 rounded-md border-2 border-gray-200 bg-transparent shadow-md" type="email" placeholder="Enter product image url" />
+                    <input {...register("img", { required: true })} className=" outline-none w-full py-2 px-2 rounded-md border-2 border-gray-200 bg-transparent shadow-md" type="text" placeholder="Enter product image url" />
 
                     <label className="text-lg mt-3" >Product Description:</label>
-                    <textarea {...register("email", { required: true })} className=" outline-none w-full py-2 px-2 rounded-md border-2 border-gray-200 bg-transparent shadow-md h-40 resize-none" type="email" placeholder="Enter product description" />
+                    <textarea {...register("des", { required: true })} className=" outline-none w-full py-2 px-2 rounded-md border-2 border-gray-200 bg-transparent shadow-md h-40 resize-none" type="text" placeholder="Enter product description" />
 
                     <div className="flex justify-between mt-3">
                         <div className="w-2/5">
                             <label className="text-lg" >Product Rating:</label>
                             <Rating
+                            // required
                             // onRate={(rate)=>checkrate(rate)}
                             emptySymbol={<i className="far fa-star text-xl text-yellow-400"></i>}
                             fullSymbol={<i className="fas fa-star text-xl text-yellow-400"></i>}
@@ -40,7 +63,7 @@ const AddProduct = () => {
                         </div>
                         <div className="w-2/5">
                             <label className="text-lg" >Product Price:</label>
-                            <input {...register("email", { required: true })} className=" outline-none w-full py-2 px-2 rounded-md border-2 border-gray-200 bg-transparent shadow-md" type="email" placeholder="Enter product price" />
+                            <input {...register("price", { required: true })} className=" outline-none w-full py-2 px-2 rounded-md border-2 border-gray-200 bg-transparent shadow-md" type="number" placeholder="Enter product price" />
                         </div>
                     </div>
                     <button type="submit" className="post-btn mt-4 mx-auto">
@@ -55,7 +78,7 @@ const AddProduct = () => {
                         <span>Post</span>
                     </button>
                     {errors.exampleRequired && <span>This field is required</span>}
-                </form>
+                </form>}
                 
             </div>
         </div>
