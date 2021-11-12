@@ -43,8 +43,9 @@ const ProductBook = () => {
         
         data.quantity = quantity;
         data.prod_id = id;
-        data.prod_title = products.title; 
         data.panding = true;
+        data.prod_title = products.title; 
+        data.user_img = user.photoURL;
         delete data.checkUser;
 
         console.log(data)

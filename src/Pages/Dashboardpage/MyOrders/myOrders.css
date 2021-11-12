@@ -61,13 +61,97 @@
   transform: scale(0.8);
 }
 
+/* shinpping btn  */
+
+.shipselect {
+  width: 120px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: #42ba96;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #42ba96;
+  font-size: 0.8rem;
+}
+
+.shipselect,
+.shipselect span {
+  transition: 200ms;
+}
+
+.shipselect .text {
+  transform: translateX(10px);
+  color: white;
+  font-weight: bold;
+}
+
+.shipselect .icon {
+  position: absolute;
+  border-left: 1px solid #2aa07d;
+  transform: translateX(95px);
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shipselect svg {
+  width: 10px;
+  fill: #eee;
+}
+
+.shipselect:hover {
+  background: #65cfaf;
+}
+
+.shipselect:hover .text {
+  color: transparent;
+}
+
+.shipselect:hover .icon {
+  width: 100px;
+  border-left: none;
+  transform: translateX(7px);
+}
+
+.shipselect:focus {
+  outline: none;
+}
+
+.shipselect:active .icon svg {
+  transform: scale(0.8);
+}
+
 .panding-btn {
   background-color: #e62222;
   padding: 5px 25px;
   font-size: 0.8rem;
   color: white;
 }
+.shipping-btn {
+  background-color: #42ba96;
+  padding: 5px 25px;
+  font-size: 0.8rem;
+  color: white;
+}
 .order-title-underline {
-  border-top: 4px solid rgb(104, 7, 7);
-  width: 10rem;
+  border-top: 4px solid rgb(180, 179, 179);
+  width: 6rem;
+  border-radius: 20rem;
+}
+.pan-quantity {
+  background-color: #e62222;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  color: white;
+}
+.ship-quantity {
+  background-color: #42ba96;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  color: white;
 }
