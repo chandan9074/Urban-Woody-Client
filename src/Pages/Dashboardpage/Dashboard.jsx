@@ -32,6 +32,8 @@ import AddReviews from './AddReviews/AddReviews';
 import Payment from './Paymentpage/Payment';
 import ManageAdmin from './MakeAdminpage/ManageAdmin';
 import AddProduct from './AddProducespage/AddProduct';
+import ManageOrder from './ManageOrderpage/ManageOrder';
+import ManageProducts from './MangeProductpage/ManageProduct';
 
 const drawerWidth = 200;
 
@@ -95,19 +97,19 @@ function Dashboard(props) {
       <Divider />
       <List>
           <ListItem button >
-            <i class="fas fa-cart-plus"></i>
+            <i class="fas fa-cart-plus text-base"></i>
             <Link to={`${url}/add-products`} className="ml-2 no-underline text-black font-semibold text-base">Add Products</Link>
             <ListItemText  />
           </ListItem>
           <ListItem button>
             <div className="mr-auto">
-              <i class="fas fa-user-shield text-base"></i>
-              <Link to={`${url}/manage-admin`} className="ml-2 no-underline text-black font-semibold text-base">Manage Product</Link>
+              <i class="fas fa-tasks text-base"></i>
+              <Link to={`${url}/manage-products`} className="ml-2 no-underline text-black font-semibold text-base">Manage Products</Link>
             </div>
           </ListItem>
           <ListItem button >
-            <i class="fas fa-cart-plus"></i>
-            <Link to={`${url}/add-products`} className="ml-2 no-underline text-black font-semibold text-base">Manage Order</Link>
+            <i class="fas fa-clipboard-list text-base"></i>
+            <Link to={`${url}/manage-orders`} className="ml-2 no-underline text-black font-semibold text-base">Manage Orders</Link>
             <ListItemText  />
           </ListItem>
           <ListItem button>
@@ -201,6 +203,12 @@ function Dashboard(props) {
           </Route>
           <Route path={`${path}/add-products`}>
             <AddProduct />
+          </Route>
+          <Route path={`${path}/manage-orders`}>
+            <ManageOrder />
+          </Route>
+          <Route path={`${path}/manage-products`}>
+            <ManageProducts />
           </Route>
         </Switch>
         {/* chandan */}
