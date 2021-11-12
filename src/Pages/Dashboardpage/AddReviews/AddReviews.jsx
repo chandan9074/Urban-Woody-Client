@@ -20,9 +20,9 @@ const AddReviews = () => {
                     <div className="flex flex-col my-5 mx-5">
                         <h5 className="text-lg font-semibold">Basic Info</h5>
                         <label className="mt-2 text-base font-semibold ml-1">Name</label>
-                        <input type="text" {...register("example")} value="Chandan Kumar Das" className="border-2 border-gray-200 w-72 py-1 px-2 rounded-lg shadow-md outline-none" readOnly />
+                        <input type="text" {...register("name")} value="Chandan Kumar Das" className="border-2 border-gray-200 w-72 py-1 px-2 rounded-lg shadow-md outline-none" readOnly />
                         <label className="mt-2 text-base font-semibold ml-1">Email</label>
-                        <input {...register("exampleRequired", { required: true })} className="border-2 border-gray-200 w-72 py-1 px-2 rounded-lg shadow-md outline-none"
+                        <input {...register("email", { required: true })} className="border-2 border-gray-200 w-72 py-1 px-2 rounded-lg shadow-md outline-none"
                          readOnly value="chandanraj9074@gmail.com" />
                          <label className="mt-2 text-base font-semibold ml-1">Rate Us</label>
                         <Rating
@@ -38,7 +38,7 @@ const AddReviews = () => {
                     <div  className="flex my-5 mx-5">
                         <div>
                             <h5 className="text-lg font-semibold mb-3">Review</h5>
-                            <textarea type="text" {...register("example")} className="border-2 border-gray-200 w-96 h-40 resize-none rounded-lg py-2 px-3 rounded-lg shadow-md outline-none" placeholder="Write your Review" />
+                            <textarea type="text" {...register("review")} className="border-2 border-gray-200 w-96 h-40 resize-none rounded-lg py-2 px-3 rounded-lg shadow-md outline-none" placeholder="Write your Review" />
                         </div>
                         <div className="my-auto ml-10">
                             <div className="flex items-center mb-4">
@@ -55,7 +55,7 @@ const AddReviews = () => {
                                 </label>   
                                 <p className="mb-0 font-semibold ml-3">Post as our User</p>
                             </div>
-                            <button className="post-btn mt-4 mx-auto">
+                            <button type="submit" className="post-btn mt-4 mx-auto">
                                     <div class="svg-wrapper-1">
                                         <div class="svg-wrapper">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">

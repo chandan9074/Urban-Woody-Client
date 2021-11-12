@@ -30,6 +30,8 @@ import './dashboard.css'
 import MyOrders from './MyOrders/MyOrders';
 import AddReviews from './AddReviews/AddReviews';
 import Payment from './Paymentpage/Payment';
+import ManageAdmin from './MakeAdminpage/ManageAdmin';
+import AddProduct from './AddProducespage/AddProduct';
 
 const drawerWidth = 200;
 
@@ -71,7 +73,7 @@ function Dashboard(props) {
           <ListItem button>
             <div className="mr-auto">
               <i class="fas fa-sort-amount-down text-base"></i>
-              <Link to={`${url}/myorders`} className="ml-2 no-underline text-black font-semibold text-base">My Orders</Link>
+              <Link to={`${url}/my-orders`} className="ml-2 no-underline text-black font-semibold text-base">My Orders</Link>
             </div>
           </ListItem>
           <ListItem button>
@@ -80,7 +82,7 @@ function Dashboard(props) {
             </ListItemIcon> */}
             <div className="mr-auto">
               <i class="fab fa-creative-commons-sampling-plus text-base"></i>
-              <Link to={`${url}/addreviews`}  className="ml-2 no-underline text-black font-semibold text-base">Add Review</Link>
+              <Link to={`${url}/add-reviews`}  className="ml-2 no-underline text-black font-semibold text-base">Add Review</Link>
             </div>
           </ListItem>
           <ListItem button>
@@ -92,16 +94,26 @@ function Dashboard(props) {
       </List>
       <Divider />
       <List>
-          <ListItem button key="Add Products">
-            {/* <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon> */}
-            <ListItemText primary="Add Products" />
+          <ListItem button >
+            <i class="fas fa-cart-plus"></i>
+            <Link to={`${url}/add-products`} className="ml-2 no-underline text-black font-semibold text-base">Add Products</Link>
+            <ListItemText  />
           </ListItem>
           <ListItem button>
             <div className="mr-auto">
               <i class="fas fa-user-shield text-base"></i>
-              <Link to={`${url}/make-admin`} className="ml-2 no-underline text-black font-semibold text-base">Make Admin</Link>
+              <Link to={`${url}/manage-admin`} className="ml-2 no-underline text-black font-semibold text-base">Manage Product</Link>
+            </div>
+          </ListItem>
+          <ListItem button >
+            <i class="fas fa-cart-plus"></i>
+            <Link to={`${url}/add-products`} className="ml-2 no-underline text-black font-semibold text-base">Manage Order</Link>
+            <ListItemText  />
+          </ListItem>
+          <ListItem button>
+            <div className="mr-auto">
+              <i class="fas fa-user-shield text-base"></i>
+              <Link to={`${url}/manage-admin`} className="ml-2 no-underline text-black font-semibold text-base">Manage Admin</Link>
             </div>
           </ListItem>
       </List>
@@ -175,14 +187,20 @@ function Dashboard(props) {
         <Toolbar />
 
         <Switch>
-          <Route path={`${path}/addreviews`}>
+          <Route path={`${path}/add-reviews`}>
             <AddReviews />
           </Route>
           <Route path={`${path}/payment`}>
             <Payment />
           </Route>
-          <Route path={`${path}/myorders`}>
+          <Route path={`${path}/my-orders`}>
             <MyOrders></MyOrders>
+          </Route>
+          <Route path={`${path}/manage-admin`}>
+            <ManageAdmin />
+          </Route>
+          <Route path={`${path}/add-products`}>
+            <AddProduct />
           </Route>
         </Switch>
         {/* chandan */}
