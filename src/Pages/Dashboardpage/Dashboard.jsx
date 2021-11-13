@@ -26,7 +26,7 @@ import {
 
 import useAuth from '../../hooks/useAuth';
 
-import './dashboard.css'
+import './dashboard.css';
 import MyOrders from './MyOrders/MyOrders';
 import AddReviews from './AddReviews/AddReviews';
 import Payment from './Paymentpage/Payment';
@@ -34,13 +34,14 @@ import ManageAdmin from './MakeAdminpage/ManageAdmin';
 import AddProduct from './AddProducespage/AddProduct';
 import ManageOrder from './ManageOrderpage/ManageOrder';
 import ManageProducts from './MangeProductpage/ManageProduct';
+import DashboardHome from './Dashboardpage/Dashboard';
 
 const drawerWidth = 200;
 
 function Dashboard(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const {user, logout} = useAuth()
+  const {user, logout, admin} = useAuth()
 
   const { path, url } = useRouteMatch();
 
@@ -48,11 +49,13 @@ function Dashboard(props) {
     setMobileOpen(!mobileOpen);
   };
 
+  console.log(admin)
+
   const drawer = (
     <div>
       <Toolbar />
       <div className="flex justify-center flex-col items-center">
-        {user.photoURL? <div><img src={user.photoURL} alt="" className="w-20 rounded-full" /></div>:<i class="fas fa-user"></i>}
+        {user.photoURL? <div><img src={user.photoURL} alt="" className="w-20 rounded-full" /></div>:<i class="fas fa-user text-4xl"></i>}
         <p className="text-lg text-black mt-2 mb-0">{user.displayName}</p>
          <Link to="/"  className="das-log-btn" onClick={logout}><span>Logout</span></Link>
       </div>
@@ -64,13 +67,20 @@ function Dashboard(props) {
             </ListItemIcon> */}
             <div className="mr-auto">
               <i class="fas fa-house-user text-base"></i>
-              <Link to="" className="ml-2 no-underline text-black font-semibold text-base">Home</Link>
+              <Link to="/" className="ml-2 no-underline text-black font-semibold text-base">Home</Link>
             </div>
             {/* <ListItemText primary="Home" /> */}
+          </ListItem>
+          <ListItem button key="Home" >
+            <div className="mr-auto">
+              <i class="fas fa-house-user text-base"></i>
+              <Link to="/explore" className="ml-2 no-underline text-black font-semibold text-base">Explore</Link>
+            </div>
           </ListItem>
       </List>
       <Divider />
         {/* <Link to={`${url}/myorders`} className="ml-2 no-underline text-black font-semibold text-base">My Orders</Link> */}
+        {!admin ?
       <List>
           <ListItem button>
             <div className="mr-auto">
@@ -93,7 +103,8 @@ function Dashboard(props) {
             <Link to={`${url}/payment`} className="ml-2 no-underline text-black font-semibold text-base">Payment</Link>
             </div>
           </ListItem>
-      </List>
+      </List>:
+      <div>
       <Divider />
       <List>
           <ListItem button >
@@ -119,6 +130,7 @@ function Dashboard(props) {
             </div>
           </ListItem>
       </List>
+      </div>}
     </div>
   );
 
@@ -184,7 +196,7 @@ function Dashboard(props) {
       </Box>
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+        sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
 
@@ -209,6 +221,9 @@ function Dashboard(props) {
           </Route>
           <Route path={`${path}/manage-products`}>
             <ManageProducts />
+          </Route>
+          <Route path={path}>
+            <DashboardHome />
           </Route>
         </Switch>
         {/* chandan */}

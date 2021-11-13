@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Footer from '../../Shared/Footer/Footer';
+import FooterDeshboard from '../../Shared/Footer/FooterDeshboard';
 
 import SingleMyOrder from './SingleMyOrder';
 
@@ -36,13 +38,16 @@ const MyOrders = () => {
     }
     return ( 
         <div>
-            <h3 className="font-semibold text-2xl">My Oders</h3>
-            <div></div>
-            <div className="grid grid-cols-2 gap-4">
-                {
-                    orders.map(order => <SingleMyOrder key={order._id} order={order} handleCancle={handleCancle} />)
-                }
+            <div className="dashboard-bg-align p-4">
+                <h3 className="font-semibold text-2xl">My Oders</h3>
+                <div className="order-title-underline"></div>
+                <div className="grid md:grid-cols-2 md:gap-4 grid-cols-1 mt-4">
+                    {
+                        orders.map(order => <SingleMyOrder key={order._id} order={order} handleCancle={handleCancle} />)
+                    }
+                </div>
             </div>
+            <FooterDeshboard />
         </div>
      );
 }

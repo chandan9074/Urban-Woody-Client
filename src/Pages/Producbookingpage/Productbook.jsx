@@ -45,8 +45,13 @@ const ProductBook = () => {
         data.prod_id = id;
         data.panding = true;
         data.prod_title = products.title; 
+        data.prod_img = products.img;
+        data.prod_des = products.des;
+        data.prod_rate = products.rate;
         data.user_img = user.photoURL;
         delete data.checkUser;
+
+        //product er shob data add korte hobe
 
         console.log(data)
 

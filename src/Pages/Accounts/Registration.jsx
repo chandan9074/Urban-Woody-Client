@@ -12,12 +12,15 @@ const Registration = () => {
 
     const handleName = (e) =>{
         setName(e.target.value);
+        // console.log(e.target.value)
     }
     const handleEmail = (e) =>{
         setEmail(e.target.value);
+        // console.log(e.target.value)
     }
     const handlePassword = (e) =>{
         setPassword(e.target.value);
+        // console.log(e.target.value)
     }
     const handleVarifyPass = (e) =>{
         setVarifyPass(e.target.value);

@@ -49,3 +49,7 @@
   opacity: 1;
   left: 0;
 }
+
+.dashboard-bg-align {
+  min-height: 70vh;
+}

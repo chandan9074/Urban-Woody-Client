@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import FooterDeshboard from '../../Shared/Footer/FooterDeshboard';
 
 import './manageAdmin.css'
 
@@ -8,7 +9,9 @@ const ManageAdmin = () => {
     const onSubmit = data => console.log(data);
     return ( 
         <div >
+            <div className="dashboard-bg-align p-4">
             <h3 className="font-semibold text-2xl">Manage Admin</h3>
+            <div className="order-title-underline"></div>
             <div className="flex">
                 <div className="w-1/2">
                     <form onSubmit={handleSubmit(onSubmit)} className="shadow-md border-2 border-gray-100 rounded  py-4 px-5 mt-4">
@@ -38,6 +41,8 @@ const ManageAdmin = () => {
                 </div>
                 <div>chandan</div>
             </div>
+        </div>
+        <FooterDeshboard />
         </div>
      );
 }

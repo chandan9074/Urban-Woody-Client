@@ -3,7 +3,8 @@ import React from 'react';
 const Blogs = () => {
     return ( 
         <div className="container pb-10">
-            <h1 className="text-center mb-24 mt-5">Blogs</h1>
+            <h1 className="text-center mt-5">Blogs</h1>
+            <div className="order-title-underline mx-auto mb-24"></div>
             <div className="flex justify-around">
                 <div className="w-6/12 flex flex-col">
                     <div className="flex blog-first-part ml-5 shadow-md border-1 border-gray-200 mb-3">

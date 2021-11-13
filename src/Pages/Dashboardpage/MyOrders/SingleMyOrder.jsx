@@ -5,7 +5,7 @@ import './myOrders.css';
 
 const SingleMyOrder = ({order, handleCancle}) => {
 
-    const {_id, prod_id, bill, panding, quantity} = order;
+    const {_id, prod_id, bill, panding, quantity, prod_img, prod_des, prod_rate, prod_title} = order;
 
     const [proOrders, setProOrders] = useState([])
     const [isloding, setIsloading] = useState(false)
@@ -26,19 +26,19 @@ const SingleMyOrder = ({order, handleCancle}) => {
     return ( 
         <div>
             {isloding ?<div class="loader">Loading...</div>:
-            <div className="flex shadow-md p-4 rounded-lg">
+            <div className="flex flex-col md:flex-row shadow-md p-4 rounded-lg">
                 <div>
-                    <img src="https://i.ibb.co/YWkrnmV/pexels-photo-6114955.jpg" alt="" className="w-52 h-52 rounded-lg" />
+                    <img src="https://i.ibb.co/YWkrnmV/pexels-photo-6114955.jpg" alt="" className="md:w-52 md:h-52 w-full h-64 rounded-lg" />
                     
                 </div>
-                <div className="w-72 ml-4">
-                    <h1 className="text-2xl font-semibold mb-0">{proOrders.title}</h1>
+                <div className="w-72 md:ml-4 mt-3 md:mt-0">
+                    <h1 className="text-2xl font-semibold mb-0">{prod_title}</h1>
                     <div className="order-title-underline mb-3"></div>
-                    <p className="line-elipsis text-justify mb-3 text-sm font-semibold">{proOrders.des}</p>
+                    <p className="line-elipsis text-justify mb-3 text-sm font-semibold">{prod_des}</p>
                     <div className="flex justify-between items-center mt-1">
                         <Rating
                             readonly
-                            placeholderRating={proOrders.rate}
+                            placeholderRating={prod_rate}
                             emptySymbol={<i className="far fa-star text-yellow-400"></i>}
                             placeholderSymbol={<i className="fas fa-star text-yellow-400"></i>}
                             fullSymbol={<i className="fas fa-star text-yellow-400"></i>}

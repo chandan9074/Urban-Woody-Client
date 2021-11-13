@@ -7,6 +7,7 @@ import Navigation from '../Shared/Navigation/Navigation';
 import Banner from './Banner';
 import Blogs from './Blogs/Blogs';
 import './homepage.css'
+import Review from './Reviewpart/Review';
 import Service from './ServicePart/Service';
 
 const Homepage = () => {
@@ -16,6 +17,7 @@ const Homepage = () => {
             <Banner />
             <Service />
             <Blogs />
+            <Review />
             <Footer />
         </div>
      );

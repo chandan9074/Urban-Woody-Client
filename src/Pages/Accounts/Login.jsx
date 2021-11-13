@@ -31,7 +31,7 @@ const Login = () => {
                         <Link to="/login" className="ml-auto mr-2 mb-3 text-sm font-semibold">Forget Password?</Link>
                         <button type="submit" class="fancy mx-auto mt-2">
                             <span class="top-key"></span>
-                            <a href="#" class="">Login</a>
+                            <a class="">Login</a>
                             <span class="bottom-key-1"></span>
                             <span class="bottom-key-2"></span>
                         </button>

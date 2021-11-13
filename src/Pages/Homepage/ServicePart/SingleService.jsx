@@ -11,7 +11,7 @@ const SingleService = ({product}) => {
             <img src={img} alt="" className="service-img w-64 h-80 mx-auto -mt-12" />
             <div className="flex flex-col justify-center mt-3">
                 <h1 className="text-2xl mx-auto font-bold">{title}</h1>
-                <p className="text-center text-base font-medium mb-1">{des}</p>
+                <p className="text-center text-base font-medium mb-1 line-elipsis">{des}</p>
                 <div className="flex justify-around items-center mt-1 mb-3">
                     <Rating
                         readonly
