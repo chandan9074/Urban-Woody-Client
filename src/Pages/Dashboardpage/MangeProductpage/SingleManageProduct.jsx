@@ -12,9 +12,9 @@ const SingleManageProduct = ({product, handleDelete}) => {
     }
 
     return (  
-        <div className="flex shadow-md rounded-md">
-            <img src={img} alt="" className="w-52 h-60" />
-            <div className="w-80 p-3">
+        <div className="flex flex-col md:flex-row shadow-md rounded-md mt-10 md:mt-0">
+            <img src={img} alt="" className="md:w-52 md:h-60 w-full h-72" />
+            <div className="md:w-80 w-full p-3">
                 <h3 className="text-2xl font-semibold">{title}</h3>
                 <p className="text-base line-elipsis text-justify">{des}</p>
                 <div className="flex justify-between">

@@ -59,7 +59,7 @@ const AddReviews = () => {
     }
     return ( 
         <div>
-        <div className="p-4 dashboard-bg-align">
+        <div className="md:p-4 dashboard-bg-align container">
             <h3 className="font-semibold text-2xl">Add Reviews</h3>
             <div className="order-title-underline"></div>
             { isloding ?<div class="loader">Loading...</div>:
@@ -84,12 +84,12 @@ const AddReviews = () => {
                         />                                          
                     </div>
                     <div className="border-r-2 border-gray-100 "></div>
-                    <div  className="flex w-full flex-col md:flex-row md:my-5 md:mx-5 mb-4 mx-4">
+                    <div  className="flex md:w-full flex-col md:flex-row md:my-5 md:mx-5 mb-4 mx-4">
                         <div className="md:ml-10">
                             <h5 className="text-lg font-semibold mb-3">Review</h5>
                             <textarea type="text" {...register("review")} required className="border-2 border-gray-200 w-72 md:w-96 h-40 resize-none rounded-lg py-2 px-3 rounded-lg shadow-md outline-none" placeholder="Write your Review" />
                         </div>
-                        <div className=" mt-3 md:mt-auto md:mb-auto mx-auto">
+                        <div className=" mt-3 md:mt-auto md:mb-auto ">
                             <div className="flex items-center mb-4">
                                 <label class="switch">
                                     <input type="checkbox" id="anony"/>
@@ -108,7 +108,7 @@ const AddReviews = () => {
                             <Alert variant="warning" className="mt-3 text-center">
                                 Pleace fill up all the field properly!!
                             </Alert>:null}
-                            <button type="submit" className="post-btn mt-4 mx-auto">
+                            <button type="submit" className="post-btn mt-4 md:mx-auto ml-10">
                                     <div class="svg-wrapper-1">
                                         <div class="svg-wrapper">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -126,23 +126,23 @@ const AddReviews = () => {
                                                                                                                                                                                            
             </form>}
             <div className="container">
-                <div className="flex justify-evenly bg-gray-100 mt-20 mb-10 rounded-full">
-                    <div className="shadow-md border-2 border-gray-200 rounded-lg py-3 px-5 flex flex-col items-center -mt-10 -mb-10">
+                <div className="flex flex-col md:flex-row justify-evenly py-14 md:py-0 bg-gray-100 mt-20 mb-10 rounded-full">
+                    <div className="shadow-md border-2 border-gray-200 rounded-lg py-3 px-5 flex flex-col items-center md:-mt-10 md:-mb-10">
                         <i class="fas fa-users text-5xl mb-2 text-yellow-500"></i>
                         <span className="text-2xl font-bold">1300+</span>
                         <p className="text-2xl font-bold">Members</p>
                     </div>
-                    <div className="shadow-md border-2 border-gray-200 rounded-lg py-3 px-5 flex flex-col items-center -mt-10 -mb-10">
+                    <div className="shadow-md border-2 border-gray-200 rounded-lg py-3 px-5 flex flex-col items-center md:-mt-10 md:-mb-10">
                         <i class="fas fa-smile-wink text-5xl mb-2 text-yellow-500"></i>
                         <span className="text-2xl font-bold">1000+</span>
                         <p className="text-2xl font-bold">Happy Users</p>
                     </div>
-                    <div className="shadow-md border-2 border-gray-200 rounded-lg py-3 px-5 flex flex-col items-center -mt-10 -mb-10">
+                    <div className="shadow-md border-2 border-gray-200 rounded-lg py-3 px-5 flex flex-col items-center md:-mt-10 md:-mb-10">
                         <i class="fas fa-star text-5xl mb-2 text-yellow-500"></i>
                         <span className="text-2xl font-bold">4.9</span>
                         <p className="text-2xl font-bold">Rating</p>
                     </div>
-                    <div className="shadow-md border-2 border-gray-200 rounded-lg py-3 px-5 flex flex-col items-center -mt-10 -mb-10">
+                    <div className="shadow-md border-2 border-gray-200 rounded-lg py-3 px-5 flex flex-col items-center md:-mt-10 md:-mb-10">
                         <i class="fas fa-handshake text-5xl mb-2 text-yellow-500"></i>
                         <span className="text-2xl font-bold">50+</span>
                         <p className="text-2xl font-bold">Sponsors</p>

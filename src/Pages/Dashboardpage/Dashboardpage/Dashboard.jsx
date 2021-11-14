@@ -27,10 +27,10 @@ const DashboardHome = () => {
 
     return ( 
         <div>
-            <div className="p-4 dashboard-bg-align">
+            <div className="md:p-4 dashboard-bg-align container">
                 <h3 className="font-semibold text-2xl">Dashboard</h3>
                 <div className="order-title-underline mb-4"></div>
-                <div className="grid md:grid-cols-4 md:gap-4">
+                <div className="grid md:grid-cols-4 md:gap-4 gap-y-10">
                     <div className="py-4 px-4 hover:shadow-md bg-blue-200 rounded-md">
                         <div className="flex justify-between items-center mb-0">
                             <i class="fas fa-chart-bar text-7xl text-gray-600"></i>
@@ -93,14 +93,14 @@ const DashboardHome = () => {
                     </div>
                     
                 </div>
-                <div className="grid grid-cols-3 gap-4 mt-10">
-                    <div className="col-span-2 flex">
-                        <div className="flex justify-around items-center px-2 py-3 w-3/5 shadow-md rounded-md border-2 border-gray-100">
-                            <i class="fas fa-comment-dots text-9xl text-gray-400"></i>
+                <div className="grid md:grid-cols-3 grid-cols-1 gap-4 mt-10">
+                    <div className="md:col-span-2 flex flex-col md:flex-row">
+                        <div className="flex justify-around items-center px-2 py-3 md:w-3/5 shadow-md rounded-md border-2 border-gray-100">
+                            <i class="fas fa-comment-dots md:text-9xl text-7xl text-gray-400"></i>
                             <div>
                                 <h1 className="text-xl font-semibold m-0">Send a message</h1>
                                 <div className="order-title-underline mb-3"></div>
-                                <textarea className="w-60 outline-none py-2 px-2 rounded-md border-2 border-gray-200 bg-transparent shadow-md h-36 resize-none" type="text" placeholder="Enter message" />
+                                <textarea className="md:w-60 w-40 outline-none py-2 px-2 rounded-md border-2 border-gray-200 bg-transparent shadow-md md:h-36 h-20 resize-none" type="text" placeholder="Enter message" />
                                 <button type="submit" className="post-btn mt-4 mx-auto">
                                 <div class="svg-wrapper-1">
                                     <div class="svg-wrapper">
@@ -114,12 +114,12 @@ const DashboardHome = () => {
                             </button>
                             </div>
                         </div>
-                        <div className="w-1/3  mx-auto h-full">
-                            <div className="flex flex-col items-center justify-center w-full h-1/2 rounded-md border-2 border-gray-200 hover:shadow-md bg-blue-100">
+                        <div className="md:w-1/3 flex md:flex-col make-margin md:mx-auto h-full">
+                            <div className="flex flex-col py-3 md:py-0 px-2 md:px-0 items-center justify-center w-full md:h-1/2 rounded-md border-2 border-gray-200 hover:shadow-md bg-blue-100">
                                 <i class="fas fa-medal text-5xl text-yellow-500 mb-3"></i>
                                 <h1 className="text-xl font-semibold">Spacial Offers</h1>
                             </div>
-                            <div className="flex flex-col items-center justify-center mt-2 w-full h-1/2 rounded-md border-2 border-gray-200 hover:shadow-md bg-blue-100">
+                            <div className="flex flex-col items-center justify-center md:mt-2 w-full md:h-1/2 rounded-md border-2 border-gray-200 hover:shadow-md bg-blue-100">
                                 <i class="fas fa-bullhorn text-5xl text-yellow-500 mb-3 rotate-img"></i>
                                 <h1 className="text-xl font-semibold">Shipping Status</h1>
                             </div>

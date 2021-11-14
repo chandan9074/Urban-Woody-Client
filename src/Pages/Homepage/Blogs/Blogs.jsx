@@ -10,9 +10,9 @@ const Blogs = () => {
                     <div className="flex blog-first-part md:ml-5 shadow-md border-1 border-gray-200 mb-3">
                         <img src="https://i.ibb.co/tHsdZZS/pexels-photo-7262477.jpg" alt="" className="md:w-72 w-44 md:-mt-10 md:-ml-5 -mt-10" />
                         <div className=" py-3 px-3 ">
-                            <h1 className="text-3xl font-bold mb-0">Blog Title</h1>
-                            <h4 className="text-sm mt-2">author</h4>
-                            <p className="text-base font-semibold text-justify media-line-elipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum accusamus voluptate deleniti doloremque recusandae hic qui iste id molestias nemo veniam voluptas eum veritatis iusto inventore sequi aliquid, repellendus maiores laudantium quod impedit a laboriosam? Rem a incidunt suscipit ducimus.</p>
+                            <h1 className="text-3xl font-bold mb-0">Fine Wooden Work</h1>
+                            <h4 className="text-sm mt-2">Hayden</h4>
+                            <p className="text-base font-semibold text-justify media-line-elipsis">Fine Woodworking provides all woodworkers with unique inspiration and information to improve their skills, accuracy and efficiency. It is the most trusted resource for unbiased, credible information among passionate woodworkers. Expert advice on woodworking and furniture making, with thousands of how-to videos, , blogs, and more.</p>
                         </div>
                     </div>
                     <div className="flex md:justify-around flex-col md:flex-row items-center mb-20 md:mb-0">
@@ -36,9 +36,9 @@ const Blogs = () => {
                 <div className="md:w-2/5 shadow-md border-1 border-gray-200 w-11/12 mx-auto md:mx-0">
                     <img src="https://i.ibb.co/r734mZG/pexels-photo-5691903.jpg" alt="" className="blog-second-img -ml-5 -mt-10 blog-img" />
                     <div className="py-4 px-4">
-                        <h1 className="text-3xl font-bold mb-0">Blog Title</h1>
-                        <h4 className="text-sm mt-2">author</h4>
-                        <p className="text-base font-semibold text-justify media-line-elipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum accusamus voluptate deleniti doloremque recusandae hic qui iste id molestias nemo veniam voluptas eum veritatis iusto inventore sequi aliquid, repellendus maiores laudantium quod impedit a laboriosam? Rem a incidunt suscipit ducimus.</p>
+                        <h1 className="text-3xl font-bold mb-0">Old Wood</h1>
+                        <h4 className="text-sm mt-2">Justin</h4>
+                        <p className="text-base font-semibold text-justify media-line-elipsis">At WoodWorkers Guild of America (WWGOA), we know that woodworking is more than a hobby for you it's a lifestyle. We want to be your favorite place for feeding that passion by learning new techniques, getting inspired by new ideas, and connecting with other woodworkers who feel the same way as you.</p>
                     </div>
                 </div>
             </div>

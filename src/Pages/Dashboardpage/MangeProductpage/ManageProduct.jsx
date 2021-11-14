@@ -42,7 +42,7 @@ const ManageProducts = () => {
                 <div className="order-title-underline mb-4"></div>
                 {isloding ?<div class="loader">Loading...</div>:
                 <div>{products.length?
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-2 md:gap-4 grid-cols-1">
                     {
                         products.map(product => <SingleManageProduct key={product._id} product={product} handleDelete={handleDelete} />)
                     }

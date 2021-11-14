@@ -68,19 +68,19 @@ const ManageOrder = () => {
         <div className="dashboard-bg-align p-4">
             <h3 className="font-semibold text-2xl">Manage Orders</h3>
             <div className="order-title-underline"></div>
-            <div>
+            <div className="manage-order-part">
                 <div className="flex w-full table-head-part rounded-md mb-3 mt-5">
-                    <h5 className="user-img-st-quan-part py-2 text-center m-0 text-gray-200 text-base font-semibold">User</h5>
+                    <h5 className="user-img-st-quan-part py-2 text-center m-0 text-gray-200 text-base font-semibold prod-form-img">User</h5>
 
-                    <h5 className="user-date-part py-2 text-center m-0 text-gray-200 text-base font-semibold">Date</h5>
+                    <h5 className="user-date-part py-2 text-center m-0 text-gray-200 text-base font-semibold prod-form-img">Date</h5>
 
                     <h5 className="user-other py-2 text-center m-0 text-gray-200 text-base font-semibold">User Name</h5>
 
-                    <h5 className="user-other py-2 text-center m-0 text-gray-200 text-base font-semibold">Product Name</h5>
+                    <h5 className="user-other py-2 text-center m-0 text-gray-200 text-base  font-semibold">Product Name</h5>
 
-                    <h5 className="user-img-st-quan-part py-2 text-center m-0 text-gray-200 text-base font-semibold">Quantity</h5>
+                    <h5 className="user-img-st-quan-part py-2 text-center m-0 text-gray-200 text-base font-semibold prod-form-img">Quantity</h5>
 
-                    <h5 className="user-other py-2 text-center m-0 text-gray-200 text-base font-semibold">Amount</h5>
+                    <h5 className="user-other py-2 text-center m-0 text-gray-200 text-base  font-semibold prod-form-img">Amount</h5>
 
                     <h5 className="user-img-st-quan-part py-2 text-center m-0 text-gray-200 text-base font-semibold">Status</h5>
 
@@ -88,29 +88,29 @@ const ManageOrder = () => {
                 </div>
                 {isloding ?<div class="loader">Loading...</div>:
                 <div>{orders.length?
-                <div>
+                <div >
                     {
                         orders.map(order =>
                         <div className="flex w-full shadow-md rounded-md mb-2 border-2 border-gray-100 hover:bg-gray-100">
-                            <h5 className="user-img-st-quan-part py-4 text-center m-0 text-gray-800 text-base font-semibold">{order.user_img?<img src={order.user_img} alt="" className="w-9 rounded-full mx-auto" />:<i class="fas fa-user text-2xl"></i>}</h5>
+                            <h5 className="user-img-st-quan-part py-4 text-center m-0 text-gray-800 text-base font-semibold prod-form-img">{order.user_img?<img src={order.user_img} alt="" className="w-9 rounded-full mx-auto" />:<i class="fas fa-user text-2xl"></i>}</h5>
 
-                            <h5 className="user-date-part my-auto text-center m-0 text-gray-800 text-base font-semibold">{order.date}</h5>
+                            <h5 className="user-date-part my-auto text-center m-0 text-gray-800 text-base font-semibold prod-form-img">{order.date}</h5>
 
-                            <h5 className="user-other my-auto text-center m-0 text-gray-800 text-base font-semibold">{order.name}</h5>
+                            <h5 className="user-other my-auto text-center m-0 text-gray-800 text-base font-semibold break-words">{order.name}</h5>
 
-                            <h5 className="user-other my-auto text-center m-0 text-gray-800 text-base font-semibold">{order.prod_title}</h5>
+                            <h5 className="user-other my-auto text-center m-0 text-gray-800 text-base font-semibold break-words">{order.prod_title}</h5>
 
-                            <h5 className="user-img-st-quan-part my-auto text-center m-0 text-gray-800 text-base font-semibold">{order.quantity} pic</h5>
+                            <h5 className="user-img-st-quan-part my-auto text-center m-0 text-gray-800 text-base font-semibold prod-form-img">{order.quantity} pic</h5>
 
-                            <h5 className="user-other my-auto text-center m-0 text-gray-800 text-base font-semibold">$ {order.bill}</h5>
+                            <h5 className="user-other my-auto text-center m-0 text-gray-800 text-base font-semibold prod-form-img">$ {order.bill}</h5>
                             {order.panding? 
                             <h5 className="user-img-st-quan-part my-auto text-center m-0 text-gray-800 text-base font-semibold"><span className="pan-quantity rounded-md">Panding</span></h5>:
-                            <h5 className="user-img-st-quan-part my-auto text-center m-0 text-gray-800 text-base font-semibold"><span className="ship-quantity rounded-md">Shipping</span></h5>}
+                            <h5 className="user-img-st-quan-part my-auto text-center m-0 text-gray-800 text-base font-semibold break-words"><span className="ship-quantity rounded-md">Shipping</span></h5>}
 
                             <h5 className="user-other my-auto text-center m-0 text-gray-800 text-base font-semibold">
                                 <button onClick={()=>handleDelete(order._id)} class="noselect mx-auto"><span class="text">Cancel</span><span class="icon"><svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
 
-                                <button onClick={()=>handleUpdate(order._id, order.panding)} class="select-btn mx-auto mt-2"><span class="text">Aprove</span><span class="icon"><i class="fas fa-check text-white"></i></span></button>
+                                <button onClick={()=>handleUpdate(order._id, order.panding)} class="select-btn mx-auto mt-2 prod-form-img hidden"><span class="text">Aprove</span><span class="icon"><i class="fas fa-check text-white"></i></span></button>
                             </h5>
                         </div>
                         )
@@ -118,7 +118,7 @@ const ManageOrder = () => {
                 </div>:  <img src="https://i.ibb.co/L81J3wt/no-result.png" alt="" className="opacity-30 mx-auto" /> } </div>}
             </div>
         </div>
-        <FooterDeshboard />
+        {/* <FooterDeshboard /> */}
         </div>
      );
 }

@@ -35,6 +35,7 @@ import AddProduct from './AddProducespage/AddProduct';
 import ManageOrder from './ManageOrderpage/ManageOrder';
 import ManageProducts from './MangeProductpage/ManageProduct';
 import DashboardHome from './Dashboardpage/Dashboard';
+import DashboardAdmin from './Dashboardpage/DashboardAmin';
 
 const drawerWidth = 200;
 
@@ -80,7 +81,7 @@ function Dashboard(props) {
       </List>
       <Divider />
         {/* <Link to={`${url}/myorders`} className="ml-2 no-underline text-black font-semibold text-base">My Orders</Link> */}
-        {/* {!admin ? */}
+        {!admin ?
       <List>
           <ListItem button>
             <div className="mr-auto">
@@ -137,7 +138,7 @@ function Dashboard(props) {
           </ListItem>
       </List>
       </>
-      {/* } */}
+      } 
     </div>
   );
 
@@ -230,7 +231,8 @@ function Dashboard(props) {
             <ManageProducts />
           </Route>
           <Route path={path}>
-            <DashboardHome />
+            {admin? <DashboardAdmin /> : 
+            <DashboardHome />}
           </Route>
         </Switch>
         {/* chandan */}

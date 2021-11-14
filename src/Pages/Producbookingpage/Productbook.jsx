@@ -18,7 +18,7 @@ const ProductBook = () => {
     const [toggleForm, setToggleForm] = useState(false);
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(false)
-    const {user} = useAuth();
+    const {user, admin} = useAuth();
     const {id} = useParams();
     const [quantity, setQuantity] = useState(1);
     const [newPrice, setNewprice] = useState(0);
@@ -113,7 +113,7 @@ const ProductBook = () => {
                     {isloding ?<div class="loader">Loading...</div>:
 
                     <div className="flex md:w-4/6 flex-col md:flex-row shadow-md border-2 border-gray-100 p-4">
-                        <img src="https://i.ibb.co/YWkrnmV/pexels-photo-6114955.jpg" alt="" className="w-72 h-72 md:-ml-10" />
+                        <img src={products.img} alt="" className="w-72 h-72 md:-ml-10" />
                         <div className="py-4 md:pl-10 pl-2 md:pr-4 pr-2 md:w-3/4">
                             <h3 className="text-3xl font-semibold">{products.title}</h3>
                             <p className="text-base mt-3 font-semibold text-justify line-elipsis">{products.des}</p>
@@ -134,7 +134,8 @@ const ProductBook = () => {
                                     <button onClick={handleMinus} className="plus-minus-btn bg-gray-300 px-2 py-1 rounded-lg text-gray-100"><i class="fas fa-minus"></i></button>
                                 </div>
                                 <div>
-                                    <button onClick={handleToggleForm} className="sing-btn"><span>Checkout</span></button>
+                                    {admin ? <Link to="/dashboard" className="sing-btn"><span>Dashboard</span></Link>:
+                                    <button onClick={handleToggleForm} className="sing-btn"><span>Checkout</span></button>}
                                 </div>
                             </div>
                         </div>

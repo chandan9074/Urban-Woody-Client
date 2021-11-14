@@ -106,6 +106,7 @@
   height: 22rem;
 }
 
-.blog-second-img {
-  /* width: 28rem; */
+.banner-underline {
+  border-top: 2px solid gray;
+  width: 10rem;
 }

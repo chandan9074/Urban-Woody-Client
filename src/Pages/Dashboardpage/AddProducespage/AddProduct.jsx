@@ -51,7 +51,7 @@ const AddProduct = () => {
                 <h3 className="text-2xl font-semibold">Add Products</h3>
                 <div className="order-title-underline"></div>
                 <div className="flex mt-4">
-                    <div className="w-1/2">
+                    <div className="md:w-1/2 w-full">
                         {
                             isloding ?<div className="w-2/5 mt-60"><div class="loader">Loading...</div></div>:
                         
@@ -109,7 +109,7 @@ const AddProduct = () => {
                         </div>}
                         
                     </div>
-                    <div className="w-1/2 h-full py-20 px-14">
+                    <div className="w-1/2 h-full py-20 px-14 prod-form-img">
                         <i class="fas fa-cart-plus buycart-img opacity-20"></i>
                     </div>
                 </div>

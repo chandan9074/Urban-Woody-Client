@@ -41,14 +41,14 @@ const ManageAdmin = () => {
     };
     return ( 
         <div >
-            <div className="dashboard-bg-align p-4">
+            <div className="dashboard-bg-align md:p-4 container">
             <h3 className="font-semibold text-2xl">Manage Admin</h3>
             <div className="order-title-underline"></div>
             <div className="flex">
-                <div className="w-1/2">
+                <div className="md:w-1/2">
                     <form onSubmit={handleSubmit(onSubmit)} className="shadow-md border-2 border-gray-100 rounded  py-4 px-5 mt-4">
                         <h4 className="text-base font-semibold">Make New Admin</h4>
-                        <p className=" py-2 px-2 m-0 shadow-md rounded-lg w-96 border-2 border-gray-200"><i class="fas fa-at text-gray-400"></i> <input {...register("email")} required className=" ml-2 outline-none w-60 bg-transparent" type="email" placeholder="Enter new admin email" /></p>
+                        <p className=" flex items-center py-2 px-2 m-0 shadow-md rounded-lg md:w-96 w-66 border-2 border-gray-200"><i class="fas fa-at text-gray-400"></i> <input {...register("email")} required className="ml-2 outline-none md:w-60  bg-transparent" type="email" placeholder="Enter new admin email" /></p>
 
                         <div className="flex mt-3 ml-5">
                             <div class="cntr">
@@ -82,7 +82,7 @@ const ManageAdmin = () => {
                         <p className="bg-blue-300 text-base font-bold py-2 px-3 rounded-lg w-3/4">An Admin can make another admin</p>
                     </div>
                 </div>
-                <div className="w-1/2 h-full py-20 px-14">
+                <div className="w-1/2 prod-form-img h-full py-20 px-14">
                         <i class="fas fa-user-shield buycart-img opacity-20"></i>
                     </div>
             </div>
