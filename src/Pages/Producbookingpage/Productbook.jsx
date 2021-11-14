@@ -9,6 +9,7 @@ import { useParams } from 'react-router';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../hooks/useAuth';
 import axios from 'axios';
+import { Alert } from 'react-bootstrap';
 
 const ProductBook = () => {
 
@@ -16,11 +17,11 @@ const ProductBook = () => {
     const [isloding, setIsloading] = useState(false);
     const [toggleForm, setToggleForm] = useState(false);
     const [products, setProducts] = useState([]);
-    
+    const [error, setError] = useState(false)
     const {user} = useAuth();
     const {id} = useParams();
     const [quantity, setQuantity] = useState(1);
-    const [newPrice, setNewprice ] = useState(0);
+    const [newPrice, setNewprice] = useState(0);
     const [mainprice, setMainprice] = useState(0);
 
     const newdate = new Date();
@@ -64,15 +65,17 @@ const ProductBook = () => {
                 reset();
                 setIsloading(false)
                 setToggleForm(false)
+                setError(false)
                 
             })
             .catch((error)=>{
                 setIsloading(false)
+                setError(false)
                 reset()
             })
         }
         else{
-            alert("please accept all conditions!!")
+           setError(true)
         }
     };
 
@@ -155,20 +158,28 @@ const ProductBook = () => {
                         <div className="flex flex-col m-5">
                             <h5 className="text-2xl font-semibold">Order Details</h5>
                             <label className="mt-2 text-base font-semibold ml-1">Address</label>
-                            <input type="text" {...register("address")} placeholder="Enter your shipping address" className="border-2 border-gray-200 w-72 py-1 px-2 rounded-lg shadow-md outline-none" />
+                            <input type="text" {...register("address")} required placeholder="Enter your shipping address" className="border-2 border-gray-200 w-72 py-1 px-2 rounded-lg shadow-md outline-none" />
 
                             <label className="mt-2 text-base font-semibold ml-1">Transection Number</label>
-                            <input type="text" {...register("transId")} placeholder="Enter your payment trans id" className="border-2 border-gray-200 w-72 py-1 px-2 rounded-lg shadow-md outline-none" />
+                            <input type="text" {...register("transId")} required placeholder="Enter your payment trans id" className="border-2 border-gray-200 w-72 py-1 px-2 rounded-lg shadow-md outline-none" />
+
+                            <label className="mt-2 text-base font-semibold ml-1">Phone Number</label>
+                            <input type="text" {...register("number")} required className="border-2 border-gray-200 w-72 py-1 px-2 rounded-lg shadow-md outline-none" placeholder="Enter your phone number" />
 
                             <label className="mt-2 text-base font-semibold ml-1">Bill</label>
-                            <input type="text" {...register("bill")} value={newPrice} className="border-2 border-gray-200 w-72 py-1 px-2 rounded-lg shadow-md outline-none" readOnly />
+                            <input type="text" {...register("bill")} required value={newPrice} className="border-2 border-gray-200 w-72 py-1 px-2 rounded-lg shadow-md outline-none" readOnly />
+
                         </div>
                         <div className="flex flex-col my-auto ml-5 mr-7">
                             <div class="cntr flex">
-                                <input {...register("checkUser", { required: false })}  type="checkbox" id="cbx" class="hidden-xs-up" />
+                                <input {...register("checkUser")} type="checkbox" id="cbx" class="hidden-xs-up" />
                                 <label for="cbx" class="cbx"></label>
-                            <p className="my-0 ml-3 text-sm">Are your sure to make this user admin?</p>
+                            <p className="my-0 ml-3 text-sm">I agree to accept all terms and conditions</p>
                             </div>
+                            {error? 
+                            <Alert variant="warning" className="mt-3 text-center">
+                                Please checked this condition!!
+                            </Alert>:null}
                             <button type="submit" className="sing-btn mt-3 mx-auto"><span>Pay</span></button>
                         </div>
                         {errors.exampleRequired && <span>This field is required</span>}

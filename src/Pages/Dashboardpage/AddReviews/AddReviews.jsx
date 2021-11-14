@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { Alert } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 import Rating from 'react-rating';
 import useAuth from '../../../hooks/useAuth';
@@ -10,6 +11,7 @@ import './addReview.css'
 const AddReviews = () => {
     const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
     const [rate, setRate] = useState("");
+    const [error, setError] = useState(false)
     const [isloding, setIsloading] = useState(false)
 
     const {user, logout} = useAuth()
@@ -32,14 +34,24 @@ const AddReviews = () => {
                 .then(res=>{
                     reset();
                     setIsloading(false)
+                    setError(false)
                     
                 })
                 .catch((error)=>{
                     setIsloading(false)
+                    setError(false)
                     reset()
                 })
             }
+            else{
+                setError(true)
+                setRate("")
+            }
         }
+        else{
+            setError(true)
+        }
+
     };
 
     const checkrate = (rate) => {
@@ -75,7 +87,7 @@ const AddReviews = () => {
                     <div  className="flex w-full flex-col md:flex-row md:my-5 md:mx-5 mb-4 mx-4">
                         <div className="md:ml-10">
                             <h5 className="text-lg font-semibold mb-3">Review</h5>
-                            <textarea type="text" {...register("review", { required: true })} className="border-2 border-gray-200 w-72 md:w-96 h-40 resize-none rounded-lg py-2 px-3 rounded-lg shadow-md outline-none" placeholder="Write your Review" />
+                            <textarea type="text" {...register("review")} required className="border-2 border-gray-200 w-72 md:w-96 h-40 resize-none rounded-lg py-2 px-3 rounded-lg shadow-md outline-none" placeholder="Write your Review" />
                         </div>
                         <div className=" mt-3 md:mt-auto md:mb-auto mx-auto">
                             <div className="flex items-center mb-4">
@@ -92,6 +104,10 @@ const AddReviews = () => {
                                 </label>   
                                 <p className="mb-0 font-semibold ml-3">Post as our User</p>
                             </div>
+                            {error? 
+                            <Alert variant="warning" className="mt-3 text-center">
+                                Pleace fill up all the field properly!!
+                            </Alert>:null}
                             <button type="submit" className="post-btn mt-4 mx-auto">
                                     <div class="svg-wrapper-1">
                                         <div class="svg-wrapper">
@@ -109,6 +125,30 @@ const AddReviews = () => {
                 {errors.exampleRequired && <span>This field is required</span>}
                                                                                                                                                                                            
             </form>}
+            <div className="container">
+                <div className="flex justify-evenly bg-gray-100 mt-20 mb-10 rounded-full">
+                    <div className="shadow-md border-2 border-gray-200 rounded-lg py-3 px-5 flex flex-col items-center -mt-10 -mb-10">
+                        <i class="fas fa-users text-5xl mb-2 text-yellow-500"></i>
+                        <span className="text-2xl font-bold">1300+</span>
+                        <p className="text-2xl font-bold">Members</p>
+                    </div>
+                    <div className="shadow-md border-2 border-gray-200 rounded-lg py-3 px-5 flex flex-col items-center -mt-10 -mb-10">
+                        <i class="fas fa-smile-wink text-5xl mb-2 text-yellow-500"></i>
+                        <span className="text-2xl font-bold">1000+</span>
+                        <p className="text-2xl font-bold">Happy Users</p>
+                    </div>
+                    <div className="shadow-md border-2 border-gray-200 rounded-lg py-3 px-5 flex flex-col items-center -mt-10 -mb-10">
+                        <i class="fas fa-star text-5xl mb-2 text-yellow-500"></i>
+                        <span className="text-2xl font-bold">4.9</span>
+                        <p className="text-2xl font-bold">Rating</p>
+                    </div>
+                    <div className="shadow-md border-2 border-gray-200 rounded-lg py-3 px-5 flex flex-col items-center -mt-10 -mb-10">
+                        <i class="fas fa-handshake text-5xl mb-2 text-yellow-500"></i>
+                        <span className="text-2xl font-bold">50+</span>
+                        <p className="text-2xl font-bold">Sponsors</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <FooterDeshboard />
         </div>

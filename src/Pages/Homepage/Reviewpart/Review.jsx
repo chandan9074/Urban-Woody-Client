@@ -29,7 +29,7 @@ const Review = () => {
         <div>{reviews?
         <Carousel>
             {
-                reviews.map(sinReview=><Carousel.Item className="d-flex">
+                reviews.map(sinReview=><Carousel.Item className="">
             <SingleReview  key={sinReview._id} sinReview={sinReview}></SingleReview>
           </Carousel.Item>)
             }

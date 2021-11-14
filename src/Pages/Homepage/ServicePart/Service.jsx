@@ -18,7 +18,7 @@ const Service = () => {
 
     return ( 
         <div className="container">
-            <h1 className=" text-center mt-3 text-4xl font-bold">Products</h1>
+            <h1 className=" text-center mt-3 text-4xl font-bold">Letest Products</h1>
             <div className="order-title-underline mx-auto mb-20"></div>
             {isloding ?<div class="loader">Loading...</div>:
 

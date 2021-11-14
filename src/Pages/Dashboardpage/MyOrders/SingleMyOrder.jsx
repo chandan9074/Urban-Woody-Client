@@ -28,7 +28,7 @@ const SingleMyOrder = ({order, handleCancle}) => {
             {isloding ?<div class="loader">Loading...</div>:
             <div className="flex flex-col md:flex-row shadow-md p-4 rounded-lg">
                 <div>
-                    <img src="https://i.ibb.co/YWkrnmV/pexels-photo-6114955.jpg" alt="" className="md:w-52 md:h-52 w-full h-64 rounded-lg" />
+                    <img src={prod_img} alt="" className="md:w-52 md:h-52 w-full h-64 rounded-lg" />
                     
                 </div>
                 <div className="w-72 md:ml-4 mt-3 md:mt-0">

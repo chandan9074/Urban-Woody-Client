@@ -1,12 +1,44 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
+import { Alert } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import FooterDeshboard from '../../Shared/Footer/FooterDeshboard';
 
 import './manageAdmin.css'
 
 const ManageAdmin = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const { register, handleSubmit,reset, formState: { errors } } = useForm();
+    const [isloding, setIsloading] = useState(false);
+    const [error, setError] = useState(false)
+    const onSubmit = data =>{
+        const sure = document.getElementById("cbx");
+        console.log(data)
+        if(sure.checked === true){
+            const confirmed = window.confirm("Now this user will be Admin!!!");
+            if(confirmed ){
+                setIsloading(true)
+                    axios.put('http://localhost:5000/users/admin', data)
+                    .then(res=>{
+                        // console.log(res)
+                        reset();
+                        setIsloading(false)
+                        setError(false)
+                    })
+                    .catch((error)=>{
+                        setIsloading(false)
+                        reset()
+                        setError(false)
+                    })
+            }
+            else{
+                reset();
+                setError(false)
+            }
+        }
+        else{
+            setError(true)
+        }
+    };
     return ( 
         <div >
             <div className="dashboard-bg-align p-4">
@@ -16,15 +48,19 @@ const ManageAdmin = () => {
                 <div className="w-1/2">
                     <form onSubmit={handleSubmit(onSubmit)} className="shadow-md border-2 border-gray-100 rounded  py-4 px-5 mt-4">
                         <h4 className="text-base font-semibold">Make New Admin</h4>
-                        <p className=" py-2 px-2 m-0 shadow-md rounded-lg w-96 border-2 border-gray-200"><i class="fas fa-at text-gray-400"></i> <input {...register("email", { required: true })} className=" ml-2 outline-none w-60 bg-transparent" type="email" placeholder="Enter new admin email" /></p>
+                        <p className=" py-2 px-2 m-0 shadow-md rounded-lg w-96 border-2 border-gray-200"><i class="fas fa-at text-gray-400"></i> <input {...register("email")} required className=" ml-2 outline-none w-60 bg-transparent" type="email" placeholder="Enter new admin email" /></p>
 
                         <div className="flex mt-3 ml-5">
                             <div class="cntr">
-                                <input {...register("checkUser", { required: true })}  type="checkbox" id="cbx" class="hidden-xs-up" />
+                                <input  type="checkbox" id="cbx" class="hidden-xs-up" />
                                 <label for="cbx" class="cbx"></label>
                             </div>
                             <p className="my-0 ml-3 text-sm">Are your sure to make this user admin?</p>
                         </div>
+                        {error? 
+                        <Alert variant="warning" className="mt-3 text-center">
+                            Please checked this condition!!
+                        </Alert>:null}
                         <button type="submit" className="post-btn mt-4 ml-4">
                             <div class="svg-wrapper-1">
                                 <div class="svg-wrapper">

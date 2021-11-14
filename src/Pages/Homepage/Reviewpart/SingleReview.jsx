@@ -8,13 +8,13 @@ const SingleReview = ({sinReview}) => {
     const { _id, name, review, anony, user_img, rate } = sinReview
 
     return ( 
-        <div className='md:min-h-72 w-screen'>
+        <div className='md:min-h-72 w-full'>
       <div className='py-10 bg-gray-700 bg-opacity-70 backdrop-filter backdrop-blur-sm rounded-lg'>
         <div className='container md:flex flex-col justify-evelny items-center'>
           <div className='md:w-1/4 flex justify-center'>
-            {user_img && anony ? <img className='w-36 h-36 rounded-full mx-auto' src={user_img} alt="" ></img>:<i class="fas fa-user rounded-full mx-auto text-7xl"></i>}
+            {user_img && !anony ? <img className='w-20 h-20 rounded-full mx-auto' src={user_img} alt="" ></img>:<i class="fas fa-user mb-2 rounded-full mx-auto text-7xl"></i>}
           </div>
-          <div className='md:w-3/4 mx-auto'>
+          <div className=' mx-auto'>
               {anony? <h3 className="text-center my-2 font-bold text-3xl">Anonymous</h3>:
               <h3 className="text-center my-2 font-bold text-3xl">{name}</h3>}
             <div className='text-gray-100 text-center text-base font-semibold'>{review}
