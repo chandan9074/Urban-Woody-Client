@@ -50,7 +50,7 @@ const FooterDeshboard = () => {
                     </div>
                     </div>
                     <hr className="mb-0" />
-                    <p className="m-0 text-sm font-bold text-gray-300">Copyright © 2021 Urban Woody</p>                                      
+                    <p className="m-0 text-sm font-bold text-gray-800">Copyright © 2021 Urban Woody</p>                                      
                 </div>
                 <div>
                     <h1 className="mt-6 text-right">urban woody</h1>

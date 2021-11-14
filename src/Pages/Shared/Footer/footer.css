@@ -7,8 +7,9 @@
   z-index: 10;
 }
 .footer-bg {
-  background-color: #5f9ea0;
-  border-radius: 2rem 2rem 0 0;
+  /* background-color: #5f9ea0; */
+  background-color: #c4d6d6;
+  border-radius: 1rem 1rem 0 0;
   margin-top: 2rem;
 }
 

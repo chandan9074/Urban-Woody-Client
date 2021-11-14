@@ -80,8 +80,14 @@ function Dashboard(props) {
       </List>
       <Divider />
         {/* <Link to={`${url}/myorders`} className="ml-2 no-underline text-black font-semibold text-base">My Orders</Link> */}
-        {!admin ?
+        {/* {!admin ? */}
       <List>
+          <ListItem button>
+            <div className="mr-auto">
+              <i class="fas fa-tachometer-alt text-base"></i>
+              <Link to={`${url}`} className="ml-2 no-underline text-black font-semibold text-base">Dashboard</Link>
+            </div>
+          </ListItem>
           <ListItem button>
             <div className="mr-auto">
               <i class="fas fa-sort-amount-down text-base"></i>
@@ -104,7 +110,7 @@ function Dashboard(props) {
             </div>
           </ListItem>
       </List>:
-      <div>
+      <>
       <Divider />
       <List>
           <ListItem button >
@@ -130,7 +136,8 @@ function Dashboard(props) {
             </div>
           </ListItem>
       </List>
-      </div>}
+      </>
+      {/* } */}
     </div>
   );
 
@@ -158,7 +165,7 @@ function Dashboard(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className="text-black" noWrap component="div">
-            Dashboard
+            Urban Woody
           </Typography>
         </Toolbar>
       </AppBar>
