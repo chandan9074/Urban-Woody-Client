@@ -23,7 +23,7 @@ const Explore = () => {
         <Navigation />
         <div className="container">
             <h1 className=" text-center mt-3 text-4xl font-bold">All Products</h1>
-            <div className="order-title-underline mx-auto mb-16"></div>
+            <div className="order-title-underline mx-auto md:mb-16 mb-8"></div>
             {isloding ?<div class="loader">Loading...</div>:
 
             <div>{products.length?

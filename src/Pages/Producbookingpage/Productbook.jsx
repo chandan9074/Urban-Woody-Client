@@ -107,13 +107,14 @@ const ProductBook = () => {
         <div>
             <Navigation />
             <div className="container">
-                <h1 className="text-3xl font-semibold mt-3 text-center">Order</h1>
-                <div className="w-full flex flex-col items-center justify-center my-20">
+                <h1 className="text-3xl font-bold mt-3 text-center">Order</h1>
+                <div className="order-title-underline mx-auto md:mb-20 mb-10"></div>
+                <div className="w-full flex flex-col items-center justify-center mb-20">
                     {isloding ?<div class="loader">Loading...</div>:
 
-                    <div className="flex w-4/6 shadow-md border-2 border-gray-100 p-4">
-                        <img src="https://i.ibb.co/YWkrnmV/pexels-photo-6114955.jpg" alt="" className="w-72 h-72 -ml-10" />
-                        <div className="py-4 pl-10 pr-4 w-3/4">
+                    <div className="flex md:w-4/6 flex-col md:flex-row shadow-md border-2 border-gray-100 p-4">
+                        <img src="https://i.ibb.co/YWkrnmV/pexels-photo-6114955.jpg" alt="" className="w-72 h-72 md:-ml-10" />
+                        <div className="py-4 md:pl-10 pl-2 md:pr-4 pr-2 md:w-3/4">
                             <h3 className="text-3xl font-semibold">{products.title}</h3>
                             <p className="text-base mt-3 font-semibold text-justify line-elipsis">{products.des}</p>
                             <div className="flex justify-between items-center mx-4">
@@ -141,8 +142,8 @@ const ProductBook = () => {
                     {!toggleForm ? null:
                     <div>
                         {isloding ?<div></div>:
-                        <form onSubmit={handleSubmit(onSubmit)} className="flex shadow-md border-2 border-gray-100 mt-5 rounded-md">
-                        <div className="flex flex-col m-5">
+                        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col md:flex-row shadow-md border-2 border-gray-100 mt-5 rounded-md">
+                        <div className="flex flex-col md:m-5 m-4">
                             <h5 className="text-2xl font-semibold">Basic Info</h5>
                             <label className="mt-2 text-base font-semibold ml-1">Name</label>
                             <input type="text" {...register("name")} value={user.displayName} className="border-2 border-gray-200 w-72 py-1 px-2 rounded-lg shadow-md outline-none" readOnly />
@@ -155,7 +156,7 @@ const ProductBook = () => {
 
                         </div>
                         <div className="border-r-2 border-gray-100 "></div>
-                        <div className="flex flex-col m-5">
+                        <div className="flex flex-col md:m-5 m-4">
                             <h5 className="text-2xl font-semibold">Order Details</h5>
                             <label className="mt-2 text-base font-semibold ml-1">Address</label>
                             <input type="text" {...register("address")} required placeholder="Enter your shipping address" className="border-2 border-gray-200 w-72 py-1 px-2 rounded-lg shadow-md outline-none" />
@@ -170,7 +171,7 @@ const ProductBook = () => {
                             <input type="text" {...register("bill")} required value={newPrice} className="border-2 border-gray-200 w-72 py-1 px-2 rounded-lg shadow-md outline-none" readOnly />
 
                         </div>
-                        <div className="flex flex-col my-auto ml-5 mr-7">
+                        <div className="flex flex-col my-auto md:ml-5 md:mr-7 m-4">
                             <div class="cntr flex">
                                 <input {...register("checkUser")} type="checkbox" id="cbx" class="hidden-xs-up" />
                                 <label for="cbx" class="cbx"></label>
@@ -180,7 +181,7 @@ const ProductBook = () => {
                             <Alert variant="warning" className="mt-3 text-center">
                                 Please checked this condition!!
                             </Alert>:null}
-                            <button type="submit" className="sing-btn mt-3 mx-auto"><span>Pay</span></button>
+                            <button type="submit" className="sing-btn mt-3 mx-auto md:mb-0 mb-4"><span>Pay</span></button>
                         </div>
                         {errors.exampleRequired && <span>This field is required</span>}
                         </form>}
