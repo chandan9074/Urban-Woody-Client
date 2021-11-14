@@ -38,8 +38,17 @@ const ManageAdmin = () => {
                         </button>
                         {errors.exampleRequired && <span>This field is required</span>}
                     </form>
+                    <p className="bg-yellow-300 text-3xl font-bold py-2 px-3 rounded-lg w-4/5 mt-4"> <i class="fas fa-skull-crossbones text-red-700"></i> Be Careful!!!</p>
+                    <div className="border-l-4 border-gray-300 pl-4">
+                        <p className="bg-blue-300 text-base font-bold py-2 px-3 rounded-lg w-3/4">An Admin can control all of the Users</p>
+                        <p className="bg-blue-300 text-base font-bold py-2 px-3 rounded-lg w-3/4">An Admin can manage the user order</p>
+                        <p className="bg-blue-300 text-base font-bold py-2 px-3 rounded-lg w-3/4">An Admin can manage the product of the site</p>
+                        <p className="bg-blue-300 text-base font-bold py-2 px-3 rounded-lg w-3/4">An Admin can make another admin</p>
+                    </div>
                 </div>
-                <div>chandan</div>
+                <div className="w-1/2 h-full py-20 px-14">
+                        <i class="fas fa-user-shield buycart-img opacity-20"></i>
+                    </div>
             </div>
         </div>
         <FooterDeshboard />
