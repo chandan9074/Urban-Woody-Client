@@ -26,7 +26,7 @@ const Review = () => {
 
         {isloding ?<div class="loader">Loading...</div>:
 
-        <div>{reviews?
+        <div>{reviews.length?
         <Carousel>
             {
                 reviews.map(sinReview=><Carousel.Item className="">

@@ -41,11 +41,12 @@ const MyOrders = () => {
             <div className="dashboard-bg-align p-4">
                 <h3 className="font-semibold text-2xl">My Oders</h3>
                 <div className="order-title-underline"></div>
+                {orders.length?
                 <div className="grid md:grid-cols-2 md:gap-4 grid-cols-1 mt-4">
                     {
                         orders.map(order => <SingleMyOrder key={order._id} order={order} handleCancle={handleCancle} />)
                     }
-                </div>
+                </div> :  <img src="https://i.ibb.co/L81J3wt/no-result.png" alt="" className="opacity-30 mx-auto" />}
             </div>
             <FooterDeshboard />
         </div>

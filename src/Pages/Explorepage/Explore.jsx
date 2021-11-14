@@ -26,7 +26,7 @@ const Explore = () => {
             <div className="order-title-underline mx-auto mb-16"></div>
             {isloding ?<div class="loader">Loading...</div>:
 
-            <div>{products?
+            <div>{products.length?
                 <div className="grid grid-cols-3 gap-x-4 gap-y-20 py-20">
                     {
                         products.map(product => <SingleService key={product._id} product={product} /> )

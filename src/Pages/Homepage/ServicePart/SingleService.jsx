@@ -7,7 +7,7 @@ const SingleService = ({product}) => {
 
     const {_id, title, img, des, price, rate} = product;
     return ( 
-        <div className="shadow-md w-96 px-4 pb-4 border-1 border-gray-200">
+        <div className="shadow-md md:w-96 w-86 px-4 pb-4 border-1 border-gray-200">
             <img src={img} alt="" className="service-img w-64 h-80 mx-auto -mt-12" />
             <div className="flex flex-col justify-center mt-3">
                 <h1 className="text-2xl mx-auto font-bold">{title}</h1>

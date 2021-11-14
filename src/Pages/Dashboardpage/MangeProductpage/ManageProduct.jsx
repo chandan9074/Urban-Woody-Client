@@ -41,11 +41,12 @@ const ManageProducts = () => {
                 <h3 className="font-semibold text-2xl">Manage Products</h3>
                 <div className="order-title-underline mb-4"></div>
                 {isloding ?<div class="loader">Loading...</div>:
+                <div>{products.length?
                 <div className="grid grid-cols-2 gap-4">
                     {
                         products.map(product => <SingleManageProduct key={product._id} product={product} handleDelete={handleDelete} />)
                     }
-                </div>}
+                </div>:  <img src="https://i.ibb.co/L81J3wt/no-result.png" alt="" className="opacity-30 mx-auto" /> } </div>}
             </div>
             <FooterDeshboard />
         </div>

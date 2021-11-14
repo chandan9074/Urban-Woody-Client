@@ -87,6 +87,7 @@ const ManageOrder = () => {
                     <h5 className="user-other py-2 text-center m-0 text-gray-200 text-base font-semibold">Actions</h5>
                 </div>
                 {isloding ?<div class="loader">Loading...</div>:
+                <div>{orders.length?
                 <div>
                     {
                         orders.map(order =>
@@ -114,7 +115,7 @@ const ManageOrder = () => {
                         </div>
                         )
                     }
-                </div>}
+                </div>:  <img src="https://i.ibb.co/L81J3wt/no-result.png" alt="" className="opacity-30 mx-auto" /> } </div>}
             </div>
         </div>
         <FooterDeshboard />

@@ -4,18 +4,18 @@ const Blogs = () => {
     return ( 
         <div className="container pb-10">
             <h1 className="text-center mt-5">Blogs</h1>
-            <div className="order-title-underline mx-auto mb-24"></div>
-            <div className="flex justify-around">
-                <div className="w-6/12 flex flex-col">
-                    <div className="flex blog-first-part ml-5 shadow-md border-1 border-gray-200 mb-3">
-                        <img src="https://i.ibb.co/tHsdZZS/pexels-photo-7262477.jpg" alt="" className="w-72 -mt-10 -ml-5" />
-                        <div className="py-4 px-4">
+            <div className="order-title-underline mx-auto md:mb-24 mb-10"></div>
+            <div className="flex flex-col md:flex-row justify-around">
+                <div className="md:w-6/12 flex md:flex-col flex-col-reverse mb-20 md:mb-0">
+                    <div className="flex blog-first-part md:ml-5 shadow-md border-1 border-gray-200 mb-3">
+                        <img src="https://i.ibb.co/tHsdZZS/pexels-photo-7262477.jpg" alt="" className="md:w-72 w-44 md:-mt-10 md:-ml-5 -mt-10" />
+                        <div className=" py-3 px-3 ">
                             <h1 className="text-3xl font-bold mb-0">Blog Title</h1>
                             <h4 className="text-sm mt-2">author</h4>
-                            <p className="text-base font-semibold text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum accusamus voluptate deleniti doloremque recusandae hic qui iste id molestias nemo veniam voluptas eum veritatis iusto inventore sequi aliquid, repellendus maiores laudantium quod impedit a laboriosam? Rem a incidunt suscipit ducimus.</p>
+                            <p className="text-base font-semibold text-justify media-line-elipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum accusamus voluptate deleniti doloremque recusandae hic qui iste id molestias nemo veniam voluptas eum veritatis iusto inventore sequi aliquid, repellendus maiores laudantium quod impedit a laboriosam? Rem a incidunt suscipit ducimus.</p>
                         </div>
                     </div>
-                    <div className="flex justify-around ">
+                    <div className="flex md:justify-around flex-col md:flex-row items-center mb-20 md:mb-0">
                         <div className="flex flex-col justify-center items-center shadow-md border-1 border-gray-200 mt-4 py-4 px-5">
                             <img src="https://i.ibb.co/hB500FW/pexels-photo-1865557.jpg" alt="" className="w-20 h-20 rounded-full border-4 border-gray-300" />
                             <h1 className="text-xl font-bold mt-1 mb-1">Graham</h1>
@@ -33,12 +33,12 @@ const Blogs = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-2/5 shadow-md border-1 border-gray-200">
-                    <img src="https://i.ibb.co/r734mZG/pexels-photo-5691903.jpg" alt="" className="blog-second-img -ml-5 -mt-10" />
+                <div className="md:w-2/5 shadow-md border-1 border-gray-200 w-11/12 mx-auto md:mx-0">
+                    <img src="https://i.ibb.co/r734mZG/pexels-photo-5691903.jpg" alt="" className="blog-second-img -ml-5 -mt-10 blog-img" />
                     <div className="py-4 px-4">
                         <h1 className="text-3xl font-bold mb-0">Blog Title</h1>
                         <h4 className="text-sm mt-2">author</h4>
-                        <p className="text-base font-semibold text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum accusamus voluptate deleniti doloremque recusandae hic qui iste id molestias nemo veniam voluptas eum veritatis iusto inventore sequi aliquid, repellendus maiores laudantium quod impedit a laboriosam? Rem a incidunt suscipit ducimus.</p>
+                        <p className="text-base font-semibold text-justify media-line-elipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum accusamus voluptate deleniti doloremque recusandae hic qui iste id molestias nemo veniam voluptas eum veritatis iusto inventore sequi aliquid, repellendus maiores laudantium quod impedit a laboriosam? Rem a incidunt suscipit ducimus.</p>
                     </div>
                 </div>
             </div>

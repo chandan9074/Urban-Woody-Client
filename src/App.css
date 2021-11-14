@@ -22,6 +22,34 @@
   -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
   animation: load6 1.7s infinite ease, round 1.7s infinite ease;
 }
+
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .media-line-elipsis {
+    display: -webkit-box;
+    /* max-width: 200px; */
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* blog image  */
+  .blog-img {
+    width: 95%;
+  }
+
+  /* footer  */
+  .footer-svg {
+    display: none;
+  }
+  .footer-back {
+    background-color: #c4d6d6;
+  }
+  .footer-hr {
+    margin-top: 4.8rem;
+    margin-bottom: 0;
+  }
+}
+
 @-webkit-keyframes load6 {
   0% {
     box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,

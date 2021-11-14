@@ -22,9 +22,9 @@ const Service = () => {
             <div className="order-title-underline mx-auto mb-20"></div>
             {isloding ?<div class="loader">Loading...</div>:
 
-            <div>{products?
+            <div>{products.length?
 
-            <div className="grid grid-cols-3 gap-x-4 gap-y-20">
+            <div className="grid md:grid-cols-3 md:gap-x-4 gap-y-20 grid-col-1">
                 {
                     products.map(product => <SingleService key={product._id} product={product} /> )
                 }
