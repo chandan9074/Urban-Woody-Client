@@ -17,7 +17,7 @@ const SingleReview = ({sinReview}) => {
           <div className=' mx-auto'>
               {anony? <h3 className="text-center my-2 font-bold text-3xl">Anonymous</h3>:
               <h3 className="text-center my-2 font-bold text-3xl">{name}</h3>}
-            <div className='text-gray-100 text-center text-base font-semibold'>{review}
+            <div className='text-gray-100 text-center text-base font-semibold line-elipsis'>{review}
             </div>
             <div>
               <p className='text-base pt-3 flex justify-center'>

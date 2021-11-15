@@ -53,7 +53,7 @@ const FooterDeshboard = () => {
                     <p className="m-0 text-sm font-bold text-gray-300">Copyright © 2021 Urban Woody</p>                                      
                 </div>
                 <div>
-                    <h1 className="md:mt-16 mt-10 text-right">urban woody</h1>
+                    <h1 className="md:mt-16 mt-10 text-right web-name-font text-5xl">urban woody</h1>
                     <div className="footer-title-underline ml-auto"></div>
                     <div className="w-1/2 ml-auto mt-3">
                         <h1 className="text-xl font-bold text-right">About Us</h1>

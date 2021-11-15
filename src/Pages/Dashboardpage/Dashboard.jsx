@@ -114,6 +114,12 @@ function Dashboard(props) {
       <>
       <Divider />
       <List>
+          <ListItem button>
+            <div className="mr-auto">
+              <i class="fas fa-tachometer-alt text-sm my-2"></i>
+              <Link to={`${url}`} className="ml-2 no-underline text-black font-semibold text-sm my-2">Dashboard</Link>
+            </div>
+          </ListItem>
           <ListItem button >
             <i class="fas fa-cart-plus text-sm my-2"></i>
             <Link to={`${url}/add-products`} className="ml-2 no-underline text-black font-semibold text-sm my-2">Add Products</Link>
