@@ -5,6 +5,13 @@
   text-decoration: none;
   color: white;
 }
+.shop-log-btn:hover,
+.shop-log-btn:visited,
+.shop-log-btn:link,
+.shop-log-btn:active {
+  text-decoration: none;
+  color: #234567;
+}
 
 .das-log-btn {
   display: inline-block;

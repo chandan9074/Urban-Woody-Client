@@ -5,7 +5,7 @@ import Navigation from '../Shared/Navigation/Navigation';
 
 import Footer from '../Shared/Footer/Footer';
 import './productBook.css';
-import { useParams } from 'react-router';
+import { useParams, useHistory } from 'react-router';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../hooks/useAuth';
 import axios from 'axios';
@@ -23,6 +23,7 @@ const ProductBook = () => {
     const [quantity, setQuantity] = useState(1);
     const [newPrice, setNewprice] = useState(0);
     const [mainprice, setMainprice] = useState(0);
+    const history = useHistory();
 
     const newdate = new Date();
     const localDate = newdate.toLocaleDateString();
@@ -60,6 +61,7 @@ const ProductBook = () => {
                 setIsloading(false)
                 setToggleForm(false)
                 setError(false)
+                history.push("/dashboard/my-orders");
                 
             })
             .catch((error)=>{
@@ -107,7 +109,7 @@ const ProductBook = () => {
                         <div className="py-4 md:pl-10 pl-2 md:pr-4 pr-2 md:w-3/4">
                             <h3 className="text-3xl font-semibold">{products.title}</h3>
                             <p className="text-base mt-3 font-semibold text-justify line-elipsis">{products.des}</p>
-                            <div className="flex justify-between items-center mx-4">
+                            <div className="flex justify-between items-center mx-4 mt-3">
                                 <p className="text-2xl font-semibold">$ {newPrice}</p>
                                 <Rating
                                     readonly
@@ -117,7 +119,7 @@ const ProductBook = () => {
                                     fullSymbol={<i className="fas fa-star text-yellow-400"></i>}
                                 />
                             </div>
-                            <div className="flex justify-between mx-3">
+                            <div className="flex justify-between mx-3 mt-3">
                                 <div className="flex justify-center items-center">
                                     <button onClick={handlePlus} className="plus-minus-btn bg-gray-300 px-2 py-1 rounded-lg text-gray-100"><i class="fas fa-plus"></i></button>
                                     <p className="m-0 text-3xl font-semibold mx-2">{quantity}</p>

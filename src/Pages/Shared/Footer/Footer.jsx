@@ -15,25 +15,25 @@ const Footer = () => {
                 <div className="z-10 md:mt-20  md:pt-0 footer-details w-7/12 flex flex-col">
                     <div className="flex justify-between mt-10 md:mt-0">
                         <div className="w-14 md:w-auto">
-                            <h1 className="text-xl font-bold">Useful Links</h1>
+                            <h1 className="text-xl font-bold  mb-2">Useful Links</h1>
                             <Link className="text-gray-800 text-sm font-semibold">Dashboard</Link><br />
                             <Link className="text-gray-800 text-sm font-semibold">Explore</Link>
                         </div>
                         <div className="w-14 md:w-auto">
-                            <h1 className="text-xl font-bold">Address</h1>
+                            <h1 className="text-xl font-bold  mb-2">Address</h1>
                             <p className="text-sm mb-1 font-semibold">Airport, Dhaka</p>
                             <p className="text-sm mb-1 font-semibold break-words md:break-normal">(+88) 01833039074</p>
                             <p className="text-sm font-semibold break-words md:break-normal">chandankumardas.ckd.bd@gmail.com</p>
 
                         </div>
                         <div className="w-14 md:w-auto prod-form-img">
-                            <h1 className="text-xl font-bold">Sponsors</h1>
+                            <h1 className="text-xl font-bold mb-2">Sponsors</h1>
                             <p className="text-sm mb-1 font-semibold break-words md:break-normal">Bashundhara Group</p>
                             <p className="text-sm mb-1 font-semibold">City Group</p>
                             <p className="text-sm font-semibold">Partex Group</p>
                         </div>
                     </div>
-                    <div className="flex flex-col md:flex-row items-center justify-between mt-3">
+                    <div className="flex flex-col md:flex-row items-center justify-between mt-3 mb-1">
                         <div className="flex prod-form-img">
                             <img src="https://i.ibb.co/pZkbdsf/bkash-logo-FBB258-B90-F-seeklogo-com.png" alt="" className="w-16 h-12 mr-4 border-2 border-gray-600 py-2 px-2 rounded-lg" />
                             <img src="https://i.ibb.co/1zM8QtQ/Nagad-Logo-wine.png" alt="" className="w-16 h-12 mr-4 border-2 border-gray-600 py-2 px-2  rounded-lg" />

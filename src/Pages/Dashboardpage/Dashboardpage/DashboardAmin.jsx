@@ -118,24 +118,24 @@ const DashboardAdmin = () => {
 
                     </div>
                     <div className="shadow-md rounded-md border-2 border-gray-100">
-                        <h1 className="text-xl font-semibold m-0 px-4 pt-4">Annual Status</h1>
+                        <h1 className="text-xl font-semibold  mb-2 px-4 pt-4">Annual Status</h1>
                         <hr />
-                        <div className="px-4">
-                            <h3 className="text-base font-semibold text-gray-600 flex justify-between"><span>New User</span><span>75%</span></h3>
+                        <div className="px-4 py-3">
+                            <h3 className="text-base font-semibold text-gray-600 flex justify-between mb-1"><span>New User</span><span>75%</span></h3>
                             <Box sx={{ flexGrow: 1}}>
                                 <BorderLinearProgress variant="determinate" value={75} />
                             </Box>
                         </div>
                         <hr />
-                        <div className="px-4">
-                            <h3 className="text-base font-semibold text-gray-600 flex justify-between"><span>Sales</span><span>65%</span></h3>
+                        <div className="px-4 py-3">
+                            <h3 className="text-base font-semibold text-gray-600 flex justify-between mb-1"><span>Sales</span><span>65%</span></h3>
                             <Box sx={{ flexGrow: 1}}>
                                 <BorderLinearProgress variant="determinate" value={65} />
                             </Box>
                         </div>
                         <hr />
-                        <div className="px-4 pb-4">
-                            <h3 className="text-base font-semibold text-gray-600 flex justify-between"><span>Foreign Currency</span><span>39%</span></h3>
+                        <div className="px-4 pt-3 pb-3">
+                            <h3 className="text-base font-semibold text-gray-600 flex justify-between mb-1"><span>Foreign Currency</span><span>39%</span></h3>
                             <Box sx={{ flexGrow: 1}}>
                                 <BorderLinearProgress variant="determinate" value={39} />
                             </Box>

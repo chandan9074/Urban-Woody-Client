@@ -122,23 +122,23 @@ const DashboardHome = () => {
                         </div>
                     </div>
                     <div className="shadow-md rounded-md border-2 border-gray-100">
-                        <h1 className="text-xl font-semibold m-0 px-4 pt-4">Transection Rate</h1>
+                        <h1 className="text-xl font-semibold mb-2 px-4 pt-4">Transection Rate</h1>
                         <hr />
-                        <div className="px-4">
-                            <h3 className="text-base font-semibold text-gray-600 flex justify-between"><span>This Year</span><span>63%</span></h3>
+                        <div className="px-4 py-3">
+                            <h3 className="text-base font-semibold text-gray-600 flex justify-between mb-1"><span>This Year</span><span>63%</span></h3>
                             <Box sx={{ flexGrow: 1}}>
                                 <BorderLinearProgress variant="determinate" value={63} />
                             </Box>
                         </div>
                         <hr />
-                        <div className="px-4">
-                            <h3 className="text-base font-semibold text-gray-600 flex justify-between"><span>Last Year</span><span>43%</span></h3>
+                        <div className="px-4 py-3">
+                            <h3 className="text-base font-semibold text-gray-600 flex justify-between mb-1"><span>Last Year</span><span>43%</span></h3>
                             <Box sx={{ flexGrow: 1}}>
                                 <BorderLinearProgress variant="determinate" value={43} />
                             </Box>
                         </div>
                         <hr />
-                        <div className="px-4 pb-4">
+                        <div className="px-4 pt-3 pb-4">
                             <h3 className="text-base font-semibold text-gray-600 flex justify-between"><span>Average</span><span>54%</span></h3>
                             <Box sx={{ flexGrow: 1}}>
                                 <BorderLinearProgress variant="determinate" value={54} />

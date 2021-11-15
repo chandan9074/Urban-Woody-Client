@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Banner = () => {
@@ -8,13 +9,13 @@ const Banner = () => {
                 <h1 className="text-gray-200 text-6xl banner-title">Urban Woody</h1>
                 <div className="banner-underline"></div>
                 <p className="text-gray-300 text-xl">A ONLINE WOODEN WORLD</p>
-                <button class="cta flex items-center justify-center">
+                <Link to="/explore" class="cta flex items-center justify-center shop-log-btn">
                     <span>Shop Now</span>
                     <svg width="15px" height="10px" viewBox="0 0 13 10">
                         <path d="M1,5 L11,5"></path>
                         <polyline points="8 1 12 5 8 9"></polyline>
                     </svg>
-                </button>
+                </Link>
             </div>
             
         </div>

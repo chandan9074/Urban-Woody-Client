@@ -88,7 +88,7 @@ const AddReviews = () => {
                             <h5 className="text-lg font-semibold mb-3">Review</h5>
                             <textarea type="text" {...register("review")} required className="border-2 border-gray-200 w-72 md:w-96 h-40 resize-none rounded-lg py-2 px-3 rounded-lg shadow-md outline-none" placeholder="Write your Review" />
                         </div>
-                        <div className=" mt-3 md:mt-auto md:mb-auto ">
+                        <div className=" mt-3 md:mt-auto md:mb-auto md:ml-5 ">
                             <div className="flex items-center mb-4">
                                 <label class="switch">
                                     <input type="checkbox" id="anony"/>

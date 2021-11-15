@@ -34,6 +34,7 @@ const useFirebase = () =>{
         })
         .catch((error) => {
             setError(error.message);
+            console.log(error.message)
         });
     }
 
@@ -77,6 +78,7 @@ const useFirebase = () =>{
             updateProfile(auth.currentUser, { displayName: name })
                 .then(result => {
                     setUser(result.user)
+                    setError("")
                 })
                 .catch(error => {
                     setError(error.message);
