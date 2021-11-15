@@ -16,6 +16,7 @@ import Explore from './Pages/Explorepage/Explore';
 import Dashboard from './Pages/Dashboardpage/Dashboard';
 import Purchase from './Pages/PurchasePage/Purchase';
 import ProductBook from './Pages/Producbookingpage/Productbook';
+import NotFound from './Pages/NotFoundPage/NotFund';
 
 function App() {
   return (
@@ -44,6 +45,9 @@ function App() {
           <PrivateRoute exact path="/product/:id">
             <ProductBook />
           </PrivateRoute>
+          <Route path="*">
+            <NotFound />
+          </Route>
         </Switch>
         </AuthProvider>
       </Router>
