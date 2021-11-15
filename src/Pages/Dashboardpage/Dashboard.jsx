@@ -67,32 +67,32 @@ function Dashboard(props) {
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
             </ListItemIcon> */}
             <div className="mr-auto">
-              <i class="fas fa-house-user text-base"></i>
-              <Link to="/" className="ml-2 no-underline text-black font-semibold text-base">Home</Link>
+              <i class="fas fa-house-user text-sm my-2"></i>
+              <Link to="/" className="ml-2 no-underline text-black font-semibold text-sm my-2">Home</Link>
             </div>
             {/* <ListItemText primary="Home" /> */}
           </ListItem>
           <ListItem button key="Home" >
             <div className="mr-auto">
-              <i class="fas fa-house-user text-base"></i>
-              <Link to="/explore" className="ml-2 no-underline text-black font-semibold text-base">Explore</Link>
+              <i class="fas fa-house-user text-sm my-2"></i>
+              <Link to="/explore" className="ml-2 no-underline text-black font-semibold text-sm my-2">Explore</Link>
             </div>
           </ListItem>
       </List>
       <Divider />
-        {/* <Link to={`${url}/myorders`} className="ml-2 no-underline text-black font-semibold text-base">My Orders</Link> */}
+        {/* <Link to={`${url}/myorders`} className="ml-2 no-underline text-black font-semibold text-sm my-2">My Orders</Link> */}
         {!admin ?
       <List>
           <ListItem button>
             <div className="mr-auto">
-              <i class="fas fa-tachometer-alt text-base"></i>
-              <Link to={`${url}`} className="ml-2 no-underline text-black font-semibold text-base">Dashboard</Link>
+              <i class="fas fa-tachometer-alt text-sm my-2"></i>
+              <Link to={`${url}`} className="ml-2 no-underline text-black font-semibold text-sm my-2">Dashboard</Link>
             </div>
           </ListItem>
           <ListItem button>
             <div className="mr-auto">
-              <i class="fas fa-sort-amount-down text-base"></i>
-              <Link to={`${url}/my-orders`} className="ml-2 no-underline text-black font-semibold text-base">My Orders</Link>
+              <i class="fas fa-sort-amount-down text-sm my-2"></i>
+              <Link to={`${url}/my-orders`} className="ml-2 no-underline text-black font-semibold text-sm my-2">My Orders</Link>
             </div>
           </ListItem>
           <ListItem button>
@@ -100,14 +100,14 @@ function Dashboard(props) {
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
             </ListItemIcon> */}
             <div className="mr-auto">
-              <i class="fab fa-creative-commons-sampling-plus text-base"></i>
-              <Link to={`${url}/add-reviews`}  className="ml-2 no-underline text-black font-semibold text-base">Add Review</Link>
+              <i class="fab fa-creative-commons-sampling-plus text-sm my-2"></i>
+              <Link to={`${url}/add-reviews`}  className="ml-2 no-underline text-black font-semibold text-sm my-2">Add Review</Link>
             </div>
           </ListItem>
           <ListItem button>
             <div className="mr-auto">
-            <i class="fas fa-file-invoice-dollar text-base"></i>
-            <Link to={`${url}/payment`} className="ml-2 no-underline text-black font-semibold text-base">Payment</Link>
+            <i class="fas fa-file-invoice-dollar text-sm my-2"></i>
+            <Link to={`${url}/payment`} className="ml-2 no-underline text-black font-semibold text-sm my-2">Payment</Link>
             </div>
           </ListItem>
       </List>:
@@ -115,25 +115,25 @@ function Dashboard(props) {
       <Divider />
       <List>
           <ListItem button >
-            <i class="fas fa-cart-plus text-base"></i>
-            <Link to={`${url}/add-products`} className="ml-2 no-underline text-black font-semibold text-base">Add Products</Link>
+            <i class="fas fa-cart-plus text-sm my-2"></i>
+            <Link to={`${url}/add-products`} className="ml-2 no-underline text-black font-semibold text-sm my-2">Add Products</Link>
             <ListItemText  />
           </ListItem>
           <ListItem button>
             <div className="mr-auto">
-              <i class="fas fa-tasks text-base"></i>
-              <Link to={`${url}/manage-products`} className="ml-2 no-underline text-black font-semibold text-base">Manage Products</Link>
+              <i class="fas fa-tasks text-sm my-2"></i>
+              <Link to={`${url}/manage-products`} className="ml-2 no-underline text-black font-semibold text-sm my-2">Manage Products</Link>
             </div>
           </ListItem>
           <ListItem button >
-            <i class="fas fa-clipboard-list text-base"></i>
-            <Link to={`${url}/manage-orders`} className="ml-2 no-underline text-black font-semibold text-base">Manage Orders</Link>
+            <i class="fas fa-clipboard-list text-sm my-2"></i>
+            <Link to={`${url}/manage-orders`} className="ml-2 no-underline text-black font-semibold text-sm my-2">Manage Orders</Link>
             <ListItemText  />
           </ListItem>
           <ListItem button>
             <div className="mr-auto">
-              <i class="fas fa-user-shield text-base"></i>
-              <Link to={`${url}/manage-admin`} className="ml-2 no-underline text-black font-semibold text-base">Manage Admin</Link>
+              <i class="fas fa-user-shield text-sm my-2"></i>
+              <Link to={`${url}/manage-admin`} className="ml-2 no-underline text-black font-semibold text-sm my-2">Manage Admin</Link>
             </div>
           </ListItem>
       </List>
@@ -166,7 +166,7 @@ function Dashboard(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className="text-black" noWrap component="div">
-            Urban Woody
+            <span className="web-name-font text-4xl">Urban Woody</span>
           </Typography>
         </Toolbar>
       </AppBar>
@@ -236,7 +236,7 @@ function Dashboard(props) {
           </Route>
         </Switch>
         {/* chandan */}
-        {/* <Link to={`${url}/myorders`} className="ml-2 no-underline text-black font-semibold text-base">My Orders</Link> */}
+        {/* <Link to={`${url}/myorders`} className="ml-2 no-underline text-black font-semibold text-sm my-2">My Orders</Link> */}
       </Box>
     </Box>
   );

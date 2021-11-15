@@ -1,7 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Permanent+Marker&family=Poppins&family=Road+Rage&display=swap");
 
 * {
   font-family: "Poppins", sans-serif;
+}
+
+.web-name-font {
+  font-family: "Road Rage", cursive;
+}
+
+.banner-title {
+  font-family: "Permanent Marker", cursive;
+}
+
+.title-font {
+  font-family: "Carter One", cursive;
 }
 
 .line-elipsis {

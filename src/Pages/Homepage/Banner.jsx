@@ -5,7 +5,7 @@ const Banner = () => {
     return ( 
         <div  className="banner-part flex justify-center items-center" >
             <div className="bg-gray-800 bg-opacity-80 p-20 flex flex-col items-center justify-center rounded-md">
-                <h1 className="text-gray-200 text-6xl">Urban Woody</h1>
+                <h1 className="text-gray-200 text-6xl banner-title">Urban Woody</h1>
                 <div className="banner-underline"></div>
                 <p className="text-gray-300 text-xl">A ONLINE WOODEN WORLD</p>
                 <button class="cta flex items-center justify-center">

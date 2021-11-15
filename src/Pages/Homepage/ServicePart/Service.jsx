@@ -7,7 +7,7 @@ const Service = () => {
     const [isloding, setIsloading] = useState(false)
     useEffect(() => {
         setIsloading(true)
-        fetch('http://localhost:5000/product')
+        fetch('https://fast-island-99199.herokuapp.com/product')
             .then(res => res.json())
             .then(data =>{
                 const newArray = data.slice(-6);
@@ -18,7 +18,7 @@ const Service = () => {
 
     return ( 
         <div className="container">
-            <h1 className=" text-center mt-3 text-4xl font-bold">Letest Products</h1>
+            <h1 className=" text-center mt-3 text-4xl font-bold title-font">Letest Products</h1>
             <div className="order-title-underline mx-auto mb-20"></div>
             {isloding ?<div class="loader">Loading...</div>:
 

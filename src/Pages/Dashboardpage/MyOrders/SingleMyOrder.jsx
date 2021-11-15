@@ -11,7 +11,7 @@ const SingleMyOrder = ({order, handleCancle}) => {
     const [isloding, setIsloading] = useState(false)
     useEffect(() => {
         setIsloading(true)
-        fetch(`http://localhost:5000/product/${prod_id}`)
+        fetch(`https://fast-island-99199.herokuapp.com/product/${prod_id}`)
             .then(res => res.json())
             .then(data =>{
                 setProOrders(data)

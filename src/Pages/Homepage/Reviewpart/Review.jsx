@@ -9,7 +9,7 @@ const Review = () => {
     const [isloding, setIsloading] = useState(false)
     useEffect(() => {
         setIsloading(true)
-        fetch('http://localhost:5000/review')
+        fetch('https://fast-island-99199.herokuapp.com/review')
             .then(res => res.json())
             .then(data =>{
                 setReviews(data)
@@ -19,7 +19,7 @@ const Review = () => {
     return ( 
         <div className="container mb-8">
             <div className='py-16'>
-        <h1 className='text-center text-3xl md:text-4xl font-semibold'>
+        <h1 className='text-center text-3xl md:text-4xl font-semibold title-font'>
          Customers Feedback
         </h1>
         <div className="order-title-underline mx-auto mb-16"></div>

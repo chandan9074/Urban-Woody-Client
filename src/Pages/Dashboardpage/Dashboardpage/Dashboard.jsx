@@ -28,7 +28,7 @@ const DashboardHome = () => {
     return ( 
         <div>
             <div className="md:p-4 dashboard-bg-align container">
-                <h3 className="font-semibold text-2xl">Dashboard</h3>
+                <h3 className="font-semibold text-2xl title-font">Dashboard</h3>
                 <div className="order-title-underline mb-4"></div>
                 <div className="grid md:grid-cols-4 md:gap-4 gap-y-10">
                     <div className="py-4 px-4 hover:shadow-md bg-blue-200 rounded-md">

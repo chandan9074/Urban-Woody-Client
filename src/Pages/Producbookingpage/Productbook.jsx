@@ -29,7 +29,7 @@ const ProductBook = () => {
 
     useEffect(() => {
         setIsloading(true)
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://fast-island-99199.herokuapp.com/product/${id}`)
             .then(res => res.json())
             .then(data =>{
                 setProducts(data)
@@ -59,7 +59,7 @@ const ProductBook = () => {
         // console.log("data",data);
         if(check.checked === true){
             setIsloading(true)
-            axios.post('http://localhost:5000/orders', data)
+            axios.post('https://fast-island-99199.herokuapp.com/orders', data)
             .then(res=>{
                 console.log("chandan", res)
                 reset();
@@ -107,7 +107,7 @@ const ProductBook = () => {
         <div>
             <Navigation />
             <div className="container">
-                <h1 className="text-3xl font-bold mt-3 text-center">Order</h1>
+                <h1 className="text-3xl font-bold mt-3 text-center title-font">Order Here</h1>
                 <div className="order-title-underline mx-auto md:mb-20 mb-10"></div>
                 <div className="w-full flex flex-col items-center justify-center mb-20">
                     {isloding ?<div class="loader">Loading...</div>:

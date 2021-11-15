@@ -9,7 +9,7 @@ const ManageProducts = () => {
     const [isloding, setIsloading] = useState(false)
     useEffect(() => {
         setIsloading(true)
-        fetch('http://localhost:5000/product')
+        fetch('https://fast-island-99199.herokuapp.com/product')
             .then(res => res.json())
             .then(data =>{
                 setProducts(data)
@@ -21,7 +21,7 @@ const ManageProducts = () => {
         // console.log("dukhche", id)
         const confirmed = window.confirm("Are you sure, you want to delete this user?");
         if(confirmed){
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://fast-island-99199.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
@@ -38,7 +38,7 @@ const ManageProducts = () => {
     return ( 
         <div>
             <div className="dashboard-bg-align p-4">
-                <h3 className="font-semibold text-2xl">Manage Products</h3>
+                <h3 className="font-semibold text-2xl title-font">Manage Products</h3>
                 <div className="order-title-underline mb-4"></div>
                 {isloding ?<div class="loader">Loading...</div>:
                 <div>{products.length?

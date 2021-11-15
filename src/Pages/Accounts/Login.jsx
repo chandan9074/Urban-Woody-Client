@@ -23,11 +23,11 @@ const Login = () => {
         <div>
             <Navigation />
             <div className="w-full flex flex-col justify-center items-center py-24 login-part">
-                <div className="flex flex-col shadow-md rounded-xl border-2 border-gray-200 py-5 px-5">
+                <div className="flex flex-col shadow-md rounded-xl border-2 border-gray-200 md:py-5 md:px-5  py-4 px-4">
                     <i class="fas fa-user mx-auto bg-gray-800 text-gray-200 text-7xl rounded-full shadow login-icon"></i>
                     <form onSubmit={(e)=>signInWithEmail(e)} className="flex flex-col">
-                        <p className="py-2 mt-10 px-3 shadow-md border-2 border-gray-200 rounded-lg"><i class="fas fa-at mr-2"></i> <input type="email" onBlur={handleEmail}  placeholder="Enter your email" className="w-72 outline-none border-l-2 border-gray-500 pl-2 text-gray-700 font-base font-semibold " /></p>
-                        <p className=" mb-2 py-2 px-3 shadow-md border-2 border-gray-200 rounded-lg"><i class="fas fa-unlock-alt mr-2"></i> <input type="password" onBlur={handlePassword}  placeholder="Enter your password" className="w-72 outline-none border-l-2 border-gray-500 pl-2 text-gray-700 font-base font-semibold " /></p>
+                        <p className="py-2 mt-10 px-3 shadow-md border-2 border-gray-200 rounded-lg"><i class="fas fa-at mr-2"></i> <input type="email" onBlur={handleEmail}  placeholder="Enter your email" className="md:w-72 w-54 outline-none border-l-2 border-gray-500 pl-2 text-gray-700 font-base font-semibold " /></p>
+                        <p className=" mb-2 py-2 px-3 shadow-md border-2 border-gray-200 rounded-lg"><i class="fas fa-unlock-alt mr-2"></i> <input type="password" onBlur={handlePassword}  placeholder="Enter your password" className="md:w-72 w-54 outline-none border-l-2 border-gray-500 pl-2 text-gray-700 font-base font-semibold " /></p>
                         <Link to="/login" className="ml-auto mr-2 mb-3 text-sm font-semibold">Forget Password?</Link>
                         <button type="submit" class="fancy mx-auto mt-2">
                             <span class="top-key"></span>

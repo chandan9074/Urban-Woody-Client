@@ -104,7 +104,7 @@ const useFirebase = () =>{
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('http://localhost:5000/users', {
+        fetch('https://fast-island-99199.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'
@@ -116,7 +116,7 @@ const useFirebase = () =>{
 
     useEffect(() => {
         let isAdmin = false;
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://fast-island-99199.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 if(data?.role === "admin"){

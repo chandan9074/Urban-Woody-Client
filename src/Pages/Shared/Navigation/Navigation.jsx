@@ -13,7 +13,7 @@ const Navigation = () => {
     return ( 
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
             <Container>
-            <Navbar.Brand href="#home">Urban Woody</Navbar.Brand>
+            <Navbar.Brand href="#home" className="flex justify-center items-center" ><img src="https://i.ibb.co/DLxqQw4/iogo.png" className="w-9" alt="" /><span className="text-5xl font-bold ml-2 web-name-font" >URBAN WOODY</span></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="md:mx-auto ">

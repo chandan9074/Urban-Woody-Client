@@ -30,7 +30,7 @@ const AddReviews = () => {
                 data.user_img = user.photoURL;
                 data.rate= rate;
                 setIsloading(true)
-                axios.post('http://localhost:5000/review', data)
+                axios.post('https://fast-island-99199.herokuapp.com/review', data)
                 .then(res=>{
                     reset();
                     setIsloading(false)
@@ -60,7 +60,7 @@ const AddReviews = () => {
     return ( 
         <div>
         <div className="md:p-4 dashboard-bg-align container">
-            <h3 className="font-semibold text-2xl">Add Reviews</h3>
+            <h3 className="font-semibold text-2xl title-font">Add Reviews</h3>
             <div className="order-title-underline"></div>
             { isloding ?<div class="loader">Loading...</div>:
 

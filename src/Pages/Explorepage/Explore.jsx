@@ -10,7 +10,7 @@ const Explore = () => {
 
     useEffect(() => {
         setIsloading(true)
-        fetch('http://localhost:5000/product')
+        fetch('https://fast-island-99199.herokuapp.com/product')
             .then(res => res.json())
             .then(data =>{
                 setProducts(data)
@@ -21,8 +21,8 @@ const Explore = () => {
     return ( 
     <div>
         <Navigation />
-        <div className="container">
-            <h1 className=" text-center mt-3 text-4xl font-bold">All Products</h1>
+        <div className="container min-h-screen">
+            <h1 className=" text-center mt-3 text-4xl font-bold title-font">All Products</h1>
             <div className="order-title-underline mx-auto md:mb-16 mb-8"></div>
             {isloding ?<div class="loader">Loading...</div>:
 

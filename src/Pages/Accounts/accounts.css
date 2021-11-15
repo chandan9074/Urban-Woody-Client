@@ -130,7 +130,7 @@
 .gmail-btn:link,
 .gmail-btn:active {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .gmail-btn {
@@ -141,22 +141,24 @@
   padding: 7px 17px;
   border-radius: 100px;
   /* background: #cfef00; */
-  background-color: rgb(250, 131, 110);
+  background-color: #3d405b;
   border: 1px solid transparent;
   display: flex;
   align-items: center;
   font-size: 13px;
+  color: white;
 }
 
 .gmail-btn:hover {
   /* background: #a6c900; */
-  background-color: rgb(252, 100, 73);
+  background-color: #575b7c;
 }
 
 .gmail-btn > svg {
   width: 28px;
   margin-left: 10px;
   transition: transform 0.3s ease-in-out;
+  color: white;
 }
 
 .gmail-btn:hover svg {

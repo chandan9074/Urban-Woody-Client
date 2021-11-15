@@ -17,7 +17,7 @@ const ManageAdmin = () => {
             const confirmed = window.confirm("Now this user will be Admin!!!");
             if(confirmed ){
                 setIsloading(true)
-                    axios.put('http://localhost:5000/users/admin', data)
+                    axios.put('https://fast-island-99199.herokuapp.com/users/admin', data)
                     .then(res=>{
                         // console.log(res)
                         reset();
@@ -42,7 +42,7 @@ const ManageAdmin = () => {
     return ( 
         <div >
             <div className="dashboard-bg-align md:p-4 container">
-            <h3 className="font-semibold text-2xl">Manage Admin</h3>
+            <h3 className="font-semibold text-2xl title-font">Manage Admin</h3>
             <div className="order-title-underline"></div>
             <div className="flex">
                 <div className="md:w-1/2">

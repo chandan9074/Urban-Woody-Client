@@ -18,7 +18,7 @@ const AddProduct = () => {
         if(rating){
             data.rate = rating;
             setIsloading(true)
-            axios.post('http://localhost:5000/product', data)
+            axios.post('https://fast-island-99199.herokuapp.com/product', data)
             .then(res=>{
                 console.log("chandan", res)
                 reset();
@@ -48,7 +48,7 @@ const AddProduct = () => {
     return ( 
         <div>
             <div className="dashboard-bg-align p-4">
-                <h3 className="text-2xl font-semibold">Add Products</h3>
+                <h3 className="text-2xl font-semibold title-font">Add Products</h3>
                 <div className="order-title-underline"></div>
                 <div className="flex mt-4">
                     <div className="md:w-1/2 w-full">

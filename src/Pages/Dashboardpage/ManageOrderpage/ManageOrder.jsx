@@ -16,7 +16,7 @@ const ManageOrder = () => {
     }, [])
 
     const getOrders = () =>{
-        fetch('http://localhost:5000/orders')
+        fetch('https://fast-island-99199.herokuapp.com/orders')
             .then(res => res.json())
             .then(data =>{
                 setOrders(data)
@@ -27,7 +27,7 @@ const ManageOrder = () => {
     const handleDelete = (id) =>{
         const confirmed = window.confirm("Are you sure, you want to delete this orders?");
         if(confirmed){
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://fast-island-99199.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
@@ -46,7 +46,7 @@ const ManageOrder = () => {
         if(orderSt===true){
             const newOrderSt = false;
             const updateOrder ={newOrderSt}
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://fast-island-99199.herokuapp.com/orders/${id}`, {
                 method: "PUT",
                 headers: {
                     "content-type": "application/json"
@@ -66,7 +66,7 @@ const ManageOrder = () => {
     return ( 
         <div>
         <div className="dashboard-bg-align p-4">
-            <h3 className="font-semibold text-2xl">Manage Orders</h3>
+            <h3 className="font-semibold text-2xl title-font">Manage Orders</h3>
             <div className="order-title-underline"></div>
             <div className="manage-order-part">
                 <div className="flex w-full table-head-part rounded-md mb-3 mt-5">
@@ -118,7 +118,7 @@ const ManageOrder = () => {
                 </div>:  <img src="https://i.ibb.co/L81J3wt/no-result.png" alt="" className="opacity-30 mx-auto" /> } </div>}
             </div>
         </div>
-        {/* <FooterDeshboard /> */}
+        <FooterDeshboard />
         </div>
      );
 }
