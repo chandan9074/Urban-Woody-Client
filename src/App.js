@@ -14,7 +14,6 @@ import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './Pages/Private route/PrivateRoute';
 import Explore from './Pages/Explorepage/Explore';
 import Dashboard from './Pages/Dashboardpage/Dashboard';
-import Purchase from './Pages/PurchasePage/Purchase';
 import ProductBook from './Pages/Producbookingpage/Productbook';
 import NotFound from './Pages/NotFoundPage/NotFund';
 
@@ -38,9 +37,6 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/dashboard">
             <Dashboard />
-          </PrivateRoute>
-          <PrivateRoute exact path="/purchase">
-            <Purchase />
           </PrivateRoute>
           <PrivateRoute exact path="/product/:id">
             <ProductBook />

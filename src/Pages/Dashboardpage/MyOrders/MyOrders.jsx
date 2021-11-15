@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Footer from '../../Shared/Footer/Footer';
 import FooterDeshboard from '../../Shared/Footer/FooterDeshboard';
 import useAuth from '../../../hooks/useAuth';
 
@@ -21,7 +20,6 @@ const MyOrders = () => {
     }, [])
 
     const handleCancle = (id) =>{
-        // console.log("dukhche", id)
         const confirmed = window.confirm("Are you sure, you want to delete this user?");
         if(confirmed){
             const url = `https://fast-island-99199.herokuapp.com/orders/${id}`;

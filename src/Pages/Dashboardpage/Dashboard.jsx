@@ -6,16 +6,12 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Navigaion from '../Shared/Navigation/Navigation'
 
 import {
   Link,
@@ -63,14 +59,10 @@ function Dashboard(props) {
       <Divider />
       <List>
           <ListItem button key="Home" >
-            {/* <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon> */}
             <div className="mr-auto">
               <i class="fas fa-house-user text-sm my-2"></i>
               <Link to="/" className="ml-2 no-underline text-black font-semibold text-sm my-2">Home</Link>
             </div>
-            {/* <ListItemText primary="Home" /> */}
           </ListItem>
           <ListItem button key="Home" >
             <div className="mr-auto">
@@ -80,7 +72,6 @@ function Dashboard(props) {
           </ListItem>
       </List>
       <Divider />
-        {/* <Link to={`${url}/myorders`} className="ml-2 no-underline text-black font-semibold text-sm my-2">My Orders</Link> */}
         {!admin ?
       <List>
           <ListItem button>
@@ -96,9 +87,6 @@ function Dashboard(props) {
             </div>
           </ListItem>
           <ListItem button>
-            {/* <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon> */}
             <div className="mr-auto">
               <i class="fab fa-creative-commons-sampling-plus text-sm my-2"></i>
               <Link to={`${url}/add-reviews`}  className="ml-2 no-underline text-black font-semibold text-sm my-2">Add Review</Link>
@@ -241,8 +229,6 @@ function Dashboard(props) {
             <DashboardHome />}
           </Route>
         </Switch>
-        {/* chandan */}
-        {/* <Link to={`${url}/myorders`} className="ml-2 no-underline text-black font-semibold text-sm my-2">My Orders</Link> */}
       </Box>
     </Box>
   );

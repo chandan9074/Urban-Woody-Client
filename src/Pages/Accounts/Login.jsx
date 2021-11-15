@@ -7,7 +7,6 @@ import useAuth from '../../hooks/useAuth';
 
 // import files
 import './accounts.css'
-import Button from '@restart/ui/esm/Button';
 
 const Login = () => {
 

@@ -2,7 +2,6 @@
 import React from 'react';
 
 // import files 
-import './notFound.css';
 
 const NotFound = () => {
     return ( 

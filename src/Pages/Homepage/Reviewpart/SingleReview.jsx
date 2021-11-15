@@ -4,8 +4,7 @@ import useAuth from '../../../hooks/useAuth';
 
 const SingleReview = ({sinReview}) => {
 
-    const {user, logout} = useAuth()
-    const { _id, name, review, anony, user_img, rate } = sinReview
+    const { name, review, anony, user_img, rate } = sinReview
 
     return ( 
         <div className='md:min-h-72 w-full'>

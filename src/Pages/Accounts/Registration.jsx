@@ -12,15 +12,12 @@ const Registration = () => {
 
     const handleName = (e) =>{
         setName(e.target.value);
-        // console.log(e.target.value)
     }
     const handleEmail = (e) =>{
         setEmail(e.target.value);
-        // console.log(e.target.value)
     }
     const handlePassword = (e) =>{
         setPassword(e.target.value);
-        // console.log(e.target.value)
     }
     const handleVarifyPass = (e) =>{
         setVarifyPass(e.target.value);
@@ -44,8 +41,8 @@ const Registration = () => {
                 <div className="flex flex-col shadow-md rounded-xl border-2 border-gray-200 md:py-5 md:px-5  py-4 px-4">
                     <i class="fas fa-user-plus mx-auto bg-gray-800 text-gray-200 text-6xl rounded-full shadow reg-icon"></i>
                     <form className="flex flex-col" onSubmit={(e)=>handleRegister(e)}>
-                        <p className="py-2 mt-10 px-3 shadow-md border-2 border-gray-200 rounded-lg"><i class="fas fa-at mr-2"></i> <input type="text" onChange={handleName}  placeholder="Enter your name" className="md:w-72 w-56 outline-none border-l-2 border-gray-500 pl-2 text-gray-700 font-base font-semibold " /></p>
-                        <p className=" py-2 px-3 shadow-md border-2 border-gray-200 rounded-lg"><i class="fas fa-unlock-alt mr-2"></i> <input type="email" onChange={handleEmail} placeholder="Enter your email" className="md:w-72 w-56 outline-none border-l-2 border-gray-500 pl-2 text-gray-700 font-base font-semibold " /></p>
+                        <p className="py-2 mt-10 px-3 shadow-md border-2 border-gray-200 rounded-lg"><i class="fas fa-signature mr-2"></i> <input type="text" onChange={handleName}  placeholder="Enter your name" className="md:w-72 w-56 outline-none border-l-2 border-gray-500 pl-2 text-gray-700 font-base font-semibold " /></p>
+                        <p className=" py-2 px-3 shadow-md border-2 border-gray-200 rounded-lg"><i class="fas fa-at mr-2"></i> <input type="email" onChange={handleEmail} placeholder="Enter your email" className="md:w-72 w-56 outline-none border-l-2 border-gray-500 pl-2 text-gray-700 font-base font-semibold " /></p>
                         <p className=" py-2 px-3 shadow-md border-2 border-gray-200 rounded-lg"><i class="fas fa-unlock-alt mr-2"></i> <input type="password" onChange={handlePassword} placeholder="Enter your password" className="md:w-72 w-56 outline-none border-l-2 border-gray-500 pl-2 text-gray-700 font-base font-semibold " /></p>
                         <p className="py-2 px-3 shadow-md border-2 border-gray-200 rounded-lg"><i class="fas fa-unlock-alt mr-2"></i> <input type="password" onChange={handleVarifyPass} placeholder="Rewrite your password" className="md:w-72 w-56 outline-none border-l-2 border-gray-500 pl-2 text-gray-700 font-base font-semibold " /></p>
                         <button type="submit" class="fancy mx-auto mt-3">

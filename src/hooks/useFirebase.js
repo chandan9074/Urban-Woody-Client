@@ -22,13 +22,6 @@ const useFirebase = () =>{
     const auth = getAuth();
     const createSingInWithEmail = (e) =>{
         e.preventDefault();    
-        
-        // if (!/(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{6}/.test(password)) {
-        //     setError(
-        //         "Password at least 6 char, 1 uppercase and 1 lowercase, 1 digits "
-        //     );
-        //     return;
-        // }
         console.log(email, password);
         createUserWithEmailAndPassword(auth, email, password)
         .then((res) => {
@@ -41,7 +34,6 @@ const useFirebase = () =>{
         })
         .catch((error) => {
             setError(error.message);
-            // console.log("eror", error.message)
         });
     }
 
@@ -123,7 +115,6 @@ const useFirebase = () =>{
                     isAdmin = true
                 }
                 setAdmin(isAdmin);
-                // console.log(data);
             });
     }, [user.email])
 

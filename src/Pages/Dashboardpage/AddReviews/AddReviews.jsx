@@ -9,12 +9,12 @@ import FooterDeshboard from '../../Shared/Footer/FooterDeshboard';
 import './addReview.css'
 
 const AddReviews = () => {
-    const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const [rate, setRate] = useState("");
     const [error, setError] = useState(false)
     const [isloding, setIsloading] = useState(false)
 
-    const {user, logout} = useAuth()
+    const {user} = useAuth()
     
     const onSubmit = data => {
         const anony = document.getElementById("anony");
@@ -75,7 +75,6 @@ const AddReviews = () => {
                          readOnly value="chandanraj9074@gmail.com" />
                          <label className="mt-2 text-base font-semibold ml-1">Rate Us</label>
                         <Rating
-                            // onRate={(rate)=>checkrate(rate)}
                             emptySymbol={<i className="far fa-star text-xl text-yellow-400"></i>}
                             fullSymbol={<i className="fas fa-star text-xl text-yellow-400"></i>}
                             fractions={2}

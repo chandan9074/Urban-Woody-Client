@@ -19,7 +19,6 @@ const ManageAdmin = () => {
                 setIsloading(true)
                     axios.put('https://fast-island-99199.herokuapp.com/users/admin', data)
                     .then(res=>{
-                        // console.log(res)
                         reset();
                         setIsloading(false)
                         setError(false)

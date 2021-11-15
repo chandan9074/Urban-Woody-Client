@@ -1,8 +1,6 @@
 import React from 'react';
 import Rating from 'react-rating';
 
-import './manageProduct.css'
-
 const SingleManageProduct = ({product, handleDelete}) => {
 
     const {_id, title, img, des, price, rate} = product;

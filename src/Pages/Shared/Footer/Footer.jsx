@@ -10,9 +10,6 @@ import './footer.css'
 const Footer = () => {
     return ( 
         <div className="relative footer-back">
-            {/* <svg className="absolute footer-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#5f9ea0" fill-opacity="1" d="M0,64L48,69.3C96,75,192,85,288,74.7C384,64,480,32,576,64C672,96,768,192,864,240C960,288,1056,288,1152,272C1248,256,1344,224,1392,208L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-            </svg> */}
             <svg className="absolute footer-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#5f9ea0" fill-opacity="1" d="M0,0L60,16C120,32,240,64,360,69.3C480,75,600,53,720,69.3C840,85,960,139,1080,176C1200,213,1320,235,1380,245.3L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
             <div className="container flex justify-between">
                 <div className="z-10 md:mt-20  md:pt-0 footer-details w-7/12 flex flex-col">

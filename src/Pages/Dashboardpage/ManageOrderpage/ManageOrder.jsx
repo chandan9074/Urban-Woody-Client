@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import useAuth from '../../../hooks/useAuth';
 import FooterDeshboard from '../../Shared/Footer/FooterDeshboard';
 
 import './manageOrder.css'
 
 const ManageOrder = () => {
-    const sample = [1, 2, 3, 4];
-    const {user, logout} = useAuth()
-
     const [orders, setOrders] = useState([])
     const [isloding, setIsloading] = useState(false)
     useEffect(() => {

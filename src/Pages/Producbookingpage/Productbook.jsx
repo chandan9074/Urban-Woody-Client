@@ -51,12 +51,6 @@ const ProductBook = () => {
         data.prod_rate = products.rate;
         data.user_img = user.photoURL;
         delete data.checkUser;
-
-        //product er shob data add korte hobe
-
-        console.log(data)
-
-        // console.log("data",data);
         if(check.checked === true){
             setIsloading(true)
             axios.post('https://fast-island-99199.herokuapp.com/orders', data)
@@ -82,8 +76,6 @@ const ProductBook = () => {
     const handlePlus = () =>{
         const price = quantity + 1;
         const newprice = mainprice * price;
-        // const price = document.getElementById("price").innerText;
-        // const upPrice = parsePrice * quantity;
         setNewprice(newprice)
         setQuantity(quantity + 1);
     }
@@ -92,8 +84,6 @@ const ProductBook = () => {
         if(quantity>1){
             const price = quantity - 1;
             const newprice = mainprice * price;
-        // const price = document.getElementById("price").innerText;
-        // const upPrice = parsePrice * quantity;
             setNewprice(newprice)
             setQuantity(quantity - 1);
         }
