@@ -69,10 +69,10 @@ const AddReviews = () => {
                     <div className="flex flex-col ml-4 mr-4 md:my-5 md:mx-12 my-4 ">
                         <h5 className="text-lg font-semibold">Basic Info</h5>
                         <label className="mt-2 text-base font-semibold ml-1">Name</label>
-                        <input type="text" {...register("name")} value="Chandan Kumar Das" className="border-2 border-gray-200 w-72 py-1 px-2 rounded-lg shadow-md outline-none" readOnly />
+                        <input type="text" {...register("name")} value={user.displayName} className="border-2 border-gray-200 w-72 py-1 px-2 rounded-lg shadow-md outline-none" readOnly />
                         <label className="mt-2 text-base font-semibold ml-1">Email</label>
                         <input {...register("email", { required: true })} className="border-2 border-gray-200 w-72 py-1 px-2 rounded-lg shadow-md outline-none"
-                         readOnly value="chandanraj9074@gmail.com" />
+                         readOnly value={user.email} />
                          <label className="mt-2 text-base font-semibold ml-1">Rate Us</label>
                         <Rating
                             emptySymbol={<i className="far fa-star text-xl text-yellow-400"></i>}
